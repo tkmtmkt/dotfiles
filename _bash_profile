@@ -28,3 +28,4 @@ export PATH=$M2_HOME/bin:$PATH
 
 export PATH=~/apps/bin:$PATH
 
+# vim: set ft=sh :

@@ -1,3 +1,4 @@
 #!/bin/sh
 alias sakura='ssh -p 23 takamatu@www6300u.sakura.ne.jp'
 
+# vim: set ft=sh :
