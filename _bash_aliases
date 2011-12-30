@@ -1,7 +1,7 @@
 # .bash_profile
 
-alias memo=     'vim `date +"~/work/%Y/%m/%Y%m%d.txt"`'
+alias memo='vim `date +"~/work/%Y/%m/%Y%m%d.txt"`'
 
-alias sakura=   'ssh -p 23 takamatu@www6300u.sakura.ne.jp'
+alias sakura='ssh -p 23 takamatu@www6300u.sakura.ne.jp'
 
-# vim: set sw=4 et ft=sh :
+# vim: set ft=sh :

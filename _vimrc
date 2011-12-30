@@ -28,6 +28,11 @@ endif
 "$MY_VIMRUNTIMEを使用すると Windows/Linuxで切り分ける必要が無くなります。
 "例) vimfiles/qfixapp (Linuxでは~/.vim/qfixapp)にランタイムパスを通す場合
 "set runtimepath+=$MY_VIMRUNTIME/qfixapp
+set runtimepath+=$
+if has('vim_starting')
+  set runtimepath+=$MY_VIMRUNTIME/bundle/neobundle/
+  call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
+endif
 
 "----------------------------------------
 " 内部エンコーディング指定
