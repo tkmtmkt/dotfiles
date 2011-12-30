@@ -1,4 +1,7 @@
-#!/bin/sh
-alias sakura='ssh -p 23 takamatu@www6300u.sakura.ne.jp'
+# .bash_profile
 
-# vim: set ft=sh :
+alias memo=     'vim `date +"~/work/%Y/%m/%Y%m%d.txt"`'
+
+alias sakura=   'ssh -p 23 takamatu@www6300u.sakura.ne.jp'
+
+# vim: set sw=4 et ft=sh :
