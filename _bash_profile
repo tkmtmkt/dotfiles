@@ -1,0 +1,30 @@
+# .bash_profile
+
+#
+[ -f ~/.bashrc ] && . ~/.bashrc
+
+# Load RVM function
+[ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
+
+# git 
+if [ -f /usr/share/stgit/completion/stgit-completion.bash ]; then
+    . /usr/share/stgit/completion/stgit-completion.bash
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\033[32m\]\u@\h\[\033[00m\] \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]
+\$ '
+
+export EDITOR=vi
+
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
+export CLASS_PATH=$JAVA_HOME/lib/tools.jar
+
+export ANT_HOME=~/apps/ant/apache-ant-1.8-SNAPSHOT
+export PATH=$ANT_HOME/bin:$PATH
+
+export M2_HOME=~/apps/maven/apache-maven-3.0-SNAPSHOT
+export PATH=$M2_HOME/bin:$PATH
+
+export PATH=~/apps/bin:$PATH
+
