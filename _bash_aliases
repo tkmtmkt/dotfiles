@@ -4,4 +4,6 @@ alias memo='vim ~/work/`date +"%Y/%m/%Y%m%d.txt"`'
 
 alias sakura='ssh -p 23 takamatu@www6300u.sakura.ne.jp'
 
+alias fos='fossil'
+
 # vim: set ft=sh :
