@@ -26,7 +26,7 @@
       [ -f $f2 ] && mv $f2 $f2.org
       ln -s $f1 $f2
     done
-    ln -s vimfiles ~/.vim
+    ln -s "$PWD/vimfiles" ~/.vim
 
 ### シンボリックリンク作成 (Windows)
 
