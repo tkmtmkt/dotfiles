@@ -257,10 +257,12 @@ nnoremap l <Right>
 if has('folding')
   nnoremap <expr> l foldlevel(line('.')) ? "\<Right>zo" : "\<Right>"
 endif
+nnoremap <F5> a<C-R>=strftime("%Y/%m/%d %H:%M")<CR><Esc>
 
 "----------------------------------------
 " 挿入モード
 "----------------------------------------
+inoremap <expr> <F5> strftime("%Y/%m/%d %H:%M")
 
 "----------------------------------------
 " ビジュアルモード
