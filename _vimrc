@@ -28,11 +28,6 @@ endif
 "$MY_VIMRUNTIMEを使用すると Windows/Linuxで切り分ける必要が無くなります。
 "例) vimfiles/qfixapp (Linuxでは~/.vim/qfixapp)にランタイムパスを通す場合
 "set runtimepath+=$MY_VIMRUNTIME/qfixapp
-set runtimepath+=$
-if has('vim_starting')
-  set runtimepath+=$MY_VIMRUNTIME/bundle/neobundle/
-  call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
-endif
 
 "----------------------------------------
 " 内部エンコーディング指定
@@ -372,5 +367,24 @@ endif
 "----------------------------------------
 " 各種プラグイン設定
 "----------------------------------------
+filetype off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+" recommended to install
+NeoBundle 'Shougo/vimproc'
+" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+"
+NeoBundle 'vim-scripts/VimClojure'
+NeoBundle 'PProvost/vim-ps1'
+NeoBundle 'derekwyatt/vim-scala'
+
+"pluginを使用可能にする
+filetype plugin indent on
 
 " vim: set ft=vim :
