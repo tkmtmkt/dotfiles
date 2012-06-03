@@ -1,4 +1,8 @@
-# セットアップ
+dotfiles
+========
+
+セットアップ
+------------
 
 ### チェックアウト
 
@@ -12,7 +16,10 @@
 
     cd ~/apps/dotfiles
 
+    # .gitmodule の submodule 設定を .git/config に反映する。
     git submodule init
+
+    # .git/confg の submodule 設定に従いリポジトリ内容を取得する。
     git submodule update
 
 ### シンボリックリンク作成 (Linux)
@@ -35,3 +42,4 @@ Windows PowerShellコンソールにて以下実行
     cmd /c mklink -d vimfiles $HOME/vimfiles
     cmd /c mklink _vimrc $HOME/_vimrc
 
+<!-- vim: set ts=4 sw=4 et:-->
