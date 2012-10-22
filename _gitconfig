@@ -15,7 +15,7 @@
 	interactive = auto
 	grep = auto
 [push]
-	default = tracking       # defaultのpush先はtrackingしているリポジトリ
+	default = upstream       # defaultのpush先はtrackingしているリポジトリ
 [merge]
 	tool = vimdiff
 [alias]
