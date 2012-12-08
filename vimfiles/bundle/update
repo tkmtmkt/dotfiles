@@ -1,0 +1,12 @@
+#!/bin/bash
+for f in $(ls)
+do
+    if [ -d $f ] ; then
+        echo "### $f ###"
+        pushd "$f"
+        git co master
+        git pull
+        popd
+    fi
+done
+# vim: set ts=4 sw=4 et:
