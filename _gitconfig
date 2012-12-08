@@ -3,8 +3,8 @@
 	email = tkmtmkt@gmail.com
 [core]
 	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
-	autocrlf = input                 # CRLFを自動変換
-	safecrlf = true
+#	autocrlf = input                 # CRLFを自動変換
+#	safecrlf = true
 	editor = vim
 	quotepath = false
 [color]
