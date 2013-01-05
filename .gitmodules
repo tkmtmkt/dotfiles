@@ -10,6 +10,9 @@
 [submodule "vimfiles/bundle/unite.vim"]
 	path = vimfiles/bundle/unite.vim
 	url = git://github.com/Shougo/unite.vim.git
+[submodule "vimfiles/bundle/sudo.vim"]
+	path = vimfiles/bundle/sudo.vim
+	url = git://github.com/vim-scripts/sudo.vim.git
 [submodule "vimfiles/bundle/VimClojure"]
 	path = vimfiles/bundle/VimClojure
 	url = git://github.com/vim-scripts/VimClojure.git

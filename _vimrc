@@ -380,6 +380,7 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 "
+NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'derekwyatt/vim-scala'
