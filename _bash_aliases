@@ -2,6 +2,8 @@
 
 alias memo='vim ~/work/`date +"%Y/%m/%d/%Y%m%d.mkd"`'
 
+alias today='cd ~/work/`date +"%Y/%m/%d"`'
+
 alias fos='fossil'
 
 # vim: set ft=sh :
