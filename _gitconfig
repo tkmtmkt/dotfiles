@@ -1,11 +1,11 @@
 [user]
-	name = TAKAMATSU Makoto
+	name = Takamatsu Makoto
 	email = tkmtmkt@gmail.com
 [core]
-	excludesfile = ~/.gitignore  # globalな.gitignoreの指定
+	excludesfile = ~/.gitexclude  # globalな無視ファイル指定
 #	autocrlf = input                 # CRLFを自動変換
 #	safecrlf = true
-	editor = vim
+	editor = vim +1
 	quotepath = false
 [color]
 	# colorの設定(以下のコマンドは自動で色つける)
