@@ -1,0 +1,22 @@
+# .bashrc
+
+# Source original definitions
+if [ -f /etc/skel/.bashrc ] ; then
+    . /etc/skel/.bashrc
+fi
+
+# Load RVM function
+[ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# git
+if [ -f /usr/share/stgit/completion/stgit-completion.bash ] ; then
+    . /usr/share/stgit/completion/stgit-completion.bash
+fi
+
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\033[32m\]\u@\h\[\033[00m\] \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]
+[\t]\$ '
+
+# vim: set ft=sh :
