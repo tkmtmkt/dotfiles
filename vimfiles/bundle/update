@@ -5,7 +5,7 @@ do
         echo "### $f ###"
         pushd "$f"
         git co master
-        git pull
+        git fetch
         popd
     fi
 done
