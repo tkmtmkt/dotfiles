@@ -2,16 +2,24 @@
 
 # Source original definitions
 if [ -f /etc/skel/.bashrc ] ; then
-    . /etc/skel/.bashrc
+  . /etc/skel/.bashrc
 fi
 
 # git
 if [ -f /usr/share/stgit/completion/stgit-completion.bash ] ; then
-    . /usr/share/stgit/completion/stgit-completion.bash
+  . /usr/share/stgit/completion/stgit-completion.bash
 fi
+
+export LANG=ja_JP.UTF-8
+
+[ $TERM == "linux" ] && export LC_MESSAGES=en_US.UTF-8
+
+export EDITOR=vi
+
+export DISPLAY=localhost:0.0
 
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\[\033[32m\]\u@\h\[\033[00m\] \[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]
 [\t]\$ '
 
-# vim: set ft=sh :
+# vim: set ft=sh ts=2 sw=2 et:

@@ -1,48 +1,39 @@
 # .bash_profile
 
-export LANG=ja_JP.UTF-8
+if [ ! -v BASH_PROFILE_LOADED ]; then
+  export BASH_PROFILE_LOADED=TRUE
 
-if [ $TERM == "linux" ]; then
-    export LC_MESSAGES=en_US.UTF-8
-fi
-
-export EDITOR=vi
-
-export DISPLAY=localhost:0.0
-
-# set PATH
-PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-
-[ -d "$HOME/apps/bin" ] && \
-PATH="$HOME/apps/bin:$PATH"
-
-[ -d "$HOME/bin" ] && \
-PATH="$HOME/bin:$PATH"
-
-# setting for JAVA
-if [ -d /usr/lib/jvm/java ] ; then
+  # setting for JAVA
+  if [ -d /usr/lib/jvm/java ] ; then
     export JAVA_HOME=/usr/lib/jvm/java
-elif [ -d /usr/lib/jvm/default-java ] ; then
+  elif [ -d /usr/lib/jvm/default-java ] ; then
     export JAVA_HOME=/usr/lib/jvm/default-java
-elif [ -d /usr/lib/jvm/java-1.7.0-openjdk-i386 ] ; then
+  elif [ -d /usr/lib/jvm/java-1.7.0-openjdk-i386 ] ; then
     export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-i386
+  fi
+  export CLASS_PATH=$JAVA_HOME/lib/tools.jar
+  #export JAVA_OPTS='-Dhttp.proxyHost=proxyhostURL -Dhttp.proxyPort=proxyPortNumber'
+
+  # setting for ant
+  export ANT_HOME=~/apps/ant/apache-ant-1.8-SNAPSHOT
+  [ -d $ANT_HOME ] && \
+  PATH=$ANT_HOME/bin:$PATH
+
+  # setting for maven
+  export M2_HOME=~/apps/maven/apache-maven-3.0-SNAPSHOT
+  [ -d $M2_HOME ] && \
+  PATH=$M2_HOME/bin:$PATH
+
+  # setting for Play20
+  [ -d "$HOME/apps/Play20" ] && \
+  PATH="$HOME/apps/Play20:$PATH"
+
+  [ -d "$HOME/apps/bin" ] && \
+  PATH="$HOME/apps/bin:$PATH"
+
+  [ -d "$HOME/bin" ] && \
+  PATH="$HOME/bin:$PATH"
 fi
-export CLASS_PATH=$JAVA_HOME/lib/tools.jar
-#export JAVA_OPTS='-Dhttp.proxyHost=proxyhostURL -Dhttp.proxyPort=proxyPortNumber'
-
-# setting for ant
-export ANT_HOME=~/apps/ant/apache-ant-1.8-SNAPSHOT
-[ -d $ANT_HOME ] && \
-PATH=$ANT_HOME/bin:$PATH
-
-# setting for maven
-export M2_HOME=~/apps/maven/apache-maven-3.0-SNAPSHOT
-[ -d $M2_HOME ] && \
-PATH=$M2_HOME/bin:$PATH
-
-# setting for Play20
-[ -d "$HOME/apps/Play20" ] && \
-PATH="$HOME/apps/Play20:$PATH"
 
 # Load RVM function
 [ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
@@ -50,4 +41,4 @@ PATH="$HOME/apps/Play20:$PATH"
 # Load user .bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
 
-# vim: set ft=sh :
+# vim: set ft=sh ts=2 sw=2 et:
