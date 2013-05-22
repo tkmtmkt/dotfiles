@@ -5,11 +5,6 @@ if [ -f /etc/skel/.bashrc ] ; then
     . /etc/skel/.bashrc
 fi
 
-# Load RVM function
-[ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 # git
 if [ -f /usr/share/stgit/completion/stgit-completion.bash ] ; then
     . /usr/share/stgit/completion/stgit-completion.bash
