@@ -1,18 +1,24 @@
 [submodule "vimfiles/bundle/neobundle.vim"]
 	path = vimfiles/bundle/neobundle.vim
 	url = git://github.com/Shougo/neobundle.vim.git
-[submodule "vimfiles/bundle/vimproc"]
-	path = vimfiles/bundle/vimproc
+[submodule "vimfiles/bundle/vimproc.vim"]
+	path = vimfiles/bundle/vimproc.vim
 	url = git://github.com/Shougo/vimproc.git
-[submodule "vimfiles/bundle/vimshell"]
-	path = vimfiles/bundle/vimshell
+[submodule "vimfiles/bundle/vimshell.vim"]
+	path = vimfiles/bundle/vimshell.vim
 	url = git://github.com/Shougo/vimshell.git
 [submodule "vimfiles/bundle/unite.vim"]
 	path = vimfiles/bundle/unite.vim
 	url = git://github.com/Shougo/unite.vim.git
+[submodule "vimfiles/bundle/neocomplcache.vim"]
+	path = vimfiles/bundle/neocomplcache.vim
+	url = git://github.com/Shougo/neocomplcache.vim.git
 [submodule "vimfiles/bundle/sudo.vim"]
 	path = vimfiles/bundle/sudo.vim
 	url = git://github.com/vim-scripts/sudo.vim.git
+[submodule "vimfiles/bundle/syntastic"]
+	path = vimfiles/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
 [submodule "vimfiles/bundle/VimClojure"]
 	path = vimfiles/bundle/VimClojure
 	url = git://github.com/vim-scripts/VimClojure.git
@@ -22,3 +28,6 @@
 [submodule "vimfiles/bundle/vim-scala"]
 	path = vimfiles/bundle/vim-scala
 	url = git://github.com/derekwyatt/vim-scala.git
+[submodule "vimfiles/bundle/vim-coffee-script"]
+	path = vimfiles/bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git

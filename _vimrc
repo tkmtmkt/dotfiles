@@ -377,13 +377,18 @@ endif
 " recommended to install
 NeoBundle 'Shougo/vimproc'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/unite.vim.vim'
+NeoBundle 'Shougo/neocomplcache.vim.vim'
 "
 NeoBundle 'vim-scripts/sudo.vim'
+"
+NeoBundle 'scrooloose/syntastic'
+"
 NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'kchmck/vim-coffee-script'
 
 "pluginを使用可能にする
 filetype plugin indent on
