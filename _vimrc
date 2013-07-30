@@ -389,6 +389,7 @@ NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'martintreurnicht/vim-gradle'
 
 "pluginを使用可能にする
 filetype plugin indent on
