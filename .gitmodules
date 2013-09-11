@@ -3,10 +3,10 @@
 	url = git://github.com/Shougo/neobundle.vim.git
 [submodule "vimfiles/bundle/vimproc.vim"]
 	path = vimfiles/bundle/vimproc.vim
-	url = git://github.com/Shougo/vimproc.git
+	url = git://github.com/Shougo/vimproc.vim.git
 [submodule "vimfiles/bundle/vimshell.vim"]
 	path = vimfiles/bundle/vimshell.vim
-	url = git://github.com/Shougo/vimshell.git
+	url = git://github.com/Shougo/vimshell.vim.git
 [submodule "vimfiles/bundle/unite.vim"]
 	path = vimfiles/bundle/unite.vim
 	url = git://github.com/Shougo/unite.vim.git
