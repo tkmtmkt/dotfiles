@@ -1,36 +1,36 @@
 [submodule "vimfiles/bundle/neobundle.vim"]
 	path = vimfiles/bundle/neobundle.vim
-	url = git://github.com/Shougo/neobundle.vim.git
+	url = https://github.com/Shougo/neobundle.vim.git
 [submodule "vimfiles/bundle/vimproc.vim"]
 	path = vimfiles/bundle/vimproc.vim
-	url = git://github.com/Shougo/vimproc.vim.git
+	url = https://github.com/Shougo/vimproc.vim.git
 [submodule "vimfiles/bundle/vimshell.vim"]
 	path = vimfiles/bundle/vimshell.vim
-	url = git://github.com/Shougo/vimshell.vim.git
+	url = https://github.com/Shougo/vimshell.vim.git
 [submodule "vimfiles/bundle/unite.vim"]
 	path = vimfiles/bundle/unite.vim
-	url = git://github.com/Shougo/unite.vim.git
+	url = https://github.com/Shougo/unite.vim.git
 [submodule "vimfiles/bundle/neocomplcache.vim"]
 	path = vimfiles/bundle/neocomplcache.vim
-	url = git://github.com/Shougo/neocomplcache.vim.git
+	url = https://github.com/Shougo/neocomplcache.vim.git
 [submodule "vimfiles/bundle/sudo.vim"]
 	path = vimfiles/bundle/sudo.vim
-	url = git://github.com/vim-scripts/sudo.vim.git
+	url = https://github.com/vim-scripts/sudo.vim.git
 [submodule "vimfiles/bundle/syntastic"]
 	path = vimfiles/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
+	url = https://github.com/scrooloose/syntastic.git
 [submodule "vimfiles/bundle/VimClojure"]
 	path = vimfiles/bundle/VimClojure
-	url = git://github.com/vim-scripts/VimClojure.git
+	url = https://github.com/vim-scripts/VimClojure.git
 [submodule "vimfiles/bundle/vim-ps1"]
 	path = vimfiles/bundle/vim-ps1
-	url = git://github.com/PProvost/vim-ps1.git
+	url = https://github.com/PProvost/vim-ps1.git
 [submodule "vimfiles/bundle/vim-scala"]
 	path = vimfiles/bundle/vim-scala
-	url = git://github.com/derekwyatt/vim-scala.git
+	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "vimfiles/bundle/vim-coffee-script"]
 	path = vimfiles/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
+	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "vimfiles/bundle/vim-gradle"]
 	path = vimfiles/bundle/vim-gradle
-	url = git://github.com/martintreurnicht/vim-gradle.git
+	url = https://github.com/martintreurnicht/vim-gradle.git
