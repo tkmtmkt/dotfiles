@@ -15,18 +15,18 @@ if [ ! -v BASH_PROFILE_LOADED ]; then
   #export JAVA_OPTS='-Dhttp.proxyHost=proxyhostURL -Dhttp.proxyPort=proxyPortNumber'
 
   # setting for ant
-  export ANT_HOME=~/apps/ant/apache-ant-1.8-SNAPSHOT
+  export ANT_HOME=~/apps/apache-ant-1.9.2
   [ -d $ANT_HOME ] && \
   PATH=$ANT_HOME/bin:$PATH
 
   # setting for maven
-  export M2_HOME=~/apps/maven/apache-maven-3.0-SNAPSHOT
+  export M2_HOME=~/apps/apache-maven-3.1.0
   [ -d $M2_HOME ] && \
   PATH=$M2_HOME/bin:$PATH
 
   # setting for Play20
-  [ -d "$HOME/apps/Play20" ] && \
-  PATH="$HOME/apps/Play20:$PATH"
+  [ -d "$HOME/git/Play20" ] && \
+  PATH="$HOME/git/Play20:$PATH"
 
   [ -d "$HOME/apps/bin" ] && \
   PATH="$HOME/apps/bin:$PATH"
