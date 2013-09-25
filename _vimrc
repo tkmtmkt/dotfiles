@@ -88,10 +88,12 @@ set ambiwidth=double
 set wildmenu
 "ファイルエンコーディングの候補一覧
 set fileencodings=utf-8,iso-2022-jp-3,iso-2022-jp,euc-jisx0213,euc-jp,ucs-bom,euc-jp,eucjp-ms,sjis,cp932
+"マウスを無効にする
+set mouse=
 "マウスを有効にする
-if has('mouse')
-  set mouse=a
-endif
+"if has('mouse')
+"  set mouse=a
+"endif
 "pluginを使用可能にする
 filetype plugin indent on
 
