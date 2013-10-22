@@ -10,6 +10,8 @@ if [ ! -v BASH_PROFILE_LOADED ]; then
     export JAVA_HOME=/usr/lib/jvm/default-java
   elif [ -d /usr/lib/jvm/java-1.7.0-openjdk-i386 ] ; then
     export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-i386
+  elif [ -d /usr/lib/jvm/java-1.7.0-openjdk-amd64 ] ; then
+    export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
   fi
   export CLASS_PATH=$JAVA_HOME/lib/tools.jar
   #export JAVA_OPTS='-Dhttp.proxyHost=proxyhostURL -Dhttp.proxyPort=proxyPortNumber'
@@ -20,7 +22,7 @@ if [ ! -v BASH_PROFILE_LOADED ]; then
   PATH=$ANT_HOME/bin:$PATH
 
   # setting for maven
-  export M2_HOME=~/apps/apache-maven-3.1.0
+  export M2_HOME=~/apps/apache-maven-3.1.1
   [ -d $M2_HOME ] && \
   PATH=$M2_HOME/bin:$PATH
 
