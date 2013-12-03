@@ -1,2 +1,10 @@
 vimfiles/.*
 vimfiles/bundle/.*
+
+# sbt specific
+_sbt/boot/
+staging
+target
+
+# lein specific
+_lein/self-installs/
