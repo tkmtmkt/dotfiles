@@ -3,8 +3,13 @@ vimfiles/bundle/.*
 
 # sbt specific
 _sbt/boot/
-staging
-target
+_sbt/repository/cache/
+org.scala-sbt/
+scala_2.9.2/
+staging/
+target/
+.sbt.ivy.lock
 
 # lein specific
 _lein/self-installs/
+_lein/repl-history
