@@ -8,7 +8,7 @@ org.scala-sbt/
 scala_2.9.2/
 staging/
 target/
-.sbt.ivy.lock
+*.lock
 
 # lein specific
 _lein/self-installs/
