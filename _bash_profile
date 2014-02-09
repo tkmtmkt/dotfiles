@@ -4,25 +4,17 @@ if [ ! -v BASH_PROFILE_LOADED ]; then
   export BASH_PROFILE_LOADED=TRUE
 
   # setting for JAVA
-  if [ -d /usr/lib/jvm/java ] ; then
-    export JAVA_HOME=/usr/lib/jvm/java
-  elif [ -d /usr/lib/jvm/default-java ] ; then
-    export JAVA_HOME=/usr/lib/jvm/default-java
-  elif [ -d /usr/lib/jvm/java-1.7.0-openjdk-i386 ] ; then
-    export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-i386
-  elif [ -d /usr/lib/jvm/java-1.7.0-openjdk-amd64 ] ; then
-    export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
-  fi
+  export JAVA_HOME=`find /usr/lib/jvm -name javac | sed -e 's/.bin.javac//' | sort -r | head -n 1`
   export CLASS_PATH=$JAVA_HOME/lib/tools.jar
   #export JAVA_OPTS='-Dhttp.proxyHost=proxyhostURL -Dhttp.proxyPort=proxyPortNumber'
 
   # setting for ant
-  export ANT_HOME=~/apps/apache-ant-1.9.3
+  export ANT_HOME=`find ~/apps -type d -name apache-ant-* | sort -r | head -n 1`
   [ -d $ANT_HOME ] && \
   PATH=$ANT_HOME/bin:$PATH
 
   # setting for maven
-  export M2_HOME=~/apps/apache-maven-3.1.1
+  export M2_HOME=`find ~/apps -type d -name apache-maven-* | sort -r | head -n 1`
   [ -d $M2_HOME ] && \
   PATH=$M2_HOME/bin:$PATH
 
