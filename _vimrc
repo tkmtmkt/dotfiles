@@ -62,6 +62,8 @@ if version >= 703
 endif
 "set noswapfile
 set directory=~/.vim/tmp
+"set noundofile
+set undodir=~/.vim/tmp
 "viminfoを作成しない
 "set viminfo=
 "クリップボードを共有
