@@ -1,36 +1,36 @@
-[submodule "vimfiles/bundle/neobundle.vim"]
-	path = vimfiles/bundle/neobundle.vim
+[submodule "_vim/bundle/neobundle.vim"]
+	path = _vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim.git
-[submodule "vimfiles/bundle/vimproc.vim"]
-	path = vimfiles/bundle/vimproc.vim
+[submodule "_vim/bundle/vimproc.vim"]
+	path = _vim/bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
-[submodule "vimfiles/bundle/vimshell.vim"]
-	path = vimfiles/bundle/vimshell.vim
+[submodule "_vim/bundle/vimshell.vim"]
+	path = _vim/bundle/vimshell.vim
 	url = https://github.com/Shougo/vimshell.vim.git
-[submodule "vimfiles/bundle/unite.vim"]
-	path = vimfiles/bundle/unite.vim
+[submodule "_vim/bundle/unite.vim"]
+	path = _vim/bundle/unite.vim
 	url = https://github.com/Shougo/unite.vim.git
-[submodule "vimfiles/bundle/neocomplcache.vim"]
-	path = vimfiles/bundle/neocomplcache.vim
+[submodule "_vim/bundle/neocomplcache.vim"]
+	path = _vim/bundle/neocomplcache.vim
 	url = https://github.com/Shougo/neocomplcache.vim.git
-[submodule "vimfiles/bundle/sudo.vim"]
-	path = vimfiles/bundle/sudo.vim
+[submodule "_vim/bundle/sudo.vim"]
+	path = _vim/bundle/sudo.vim
 	url = https://github.com/vim-scripts/sudo.vim.git
-[submodule "vimfiles/bundle/syntastic"]
-	path = vimfiles/bundle/syntastic
+[submodule "_vim/bundle/syntastic"]
+	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vimfiles/bundle/VimClojure"]
-	path = vimfiles/bundle/VimClojure
+[submodule "_vim/bundle/VimClojure"]
+	path = _vim/bundle/VimClojure
 	url = https://github.com/vim-scripts/VimClojure.git
-[submodule "vimfiles/bundle/vim-ps1"]
-	path = vimfiles/bundle/vim-ps1
+[submodule "_vim/bundle/vim-ps1"]
+	path = _vim/bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
-[submodule "vimfiles/bundle/vim-scala"]
-	path = vimfiles/bundle/vim-scala
+[submodule "_vim/bundle/vim-scala"]
+	path = _vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
-[submodule "vimfiles/bundle/vim-coffee-script"]
-	path = vimfiles/bundle/vim-coffee-script
+[submodule "_vim/bundle/vim-coffee-script"]
+	path = _vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "vimfiles/bundle/vim-gradle"]
-	path = vimfiles/bundle/vim-gradle
+[submodule "_vim/bundle/vim-gradle"]
+	path = _vim/bundle/vim-gradle
 	url = https://github.com/martintreurnicht/vim-gradle.git
