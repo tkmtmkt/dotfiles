@@ -4,16 +4,19 @@ if [ ! -v BASH_PROFILE_LOADED ]; then
   export BASH_PROFILE_LOADED=TRUE
 
   # setting for JAVA
+  [ -d "/usr/lib/jvm" ] && \
   export JAVA_HOME=`find /usr/lib/jvm -name javac | sed -e 's/.bin.javac//' | sort -r | head -n 1`
+  [ -d $JAVA_HOME ] && \
   export CLASS_PATH=$JAVA_HOME/lib/tools.jar
-  #export JAVA_OPTS='-Dhttp.proxyHost=proxyhostURL -Dhttp.proxyPort=proxyPortNumber'
 
   # setting for ant
+  [ -d "$HOME/apps" ] && \
   export ANT_HOME=`find ~/apps -type d -name apache-ant-* | sort -r | head -n 1`
   [ -d $ANT_HOME ] && \
   PATH=$ANT_HOME/bin:$PATH
 
   # setting for maven
+  [ -d "$HOME/apps" ] && \
   export M2_HOME=`find ~/apps -type d -name apache-maven-* | sort -r | head -n 1`
   [ -d $M2_HOME ] && \
   PATH=$M2_HOME/bin:$PATH
@@ -21,9 +24,6 @@ if [ ! -v BASH_PROFILE_LOADED ]; then
   # setting for playframefork
   [ -d "$HOME/git/playframework" ] && \
   PATH="$HOME/git/playframework:$PATH"
-
-  [ -d "$HOME/apps/bin" ] && \
-  PATH="$HOME/apps/bin:$PATH"
 
   [ -d "$HOME/bin" ] && \
   PATH="$HOME/bin:$PATH"
