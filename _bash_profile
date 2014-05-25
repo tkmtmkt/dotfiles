@@ -1,6 +1,6 @@
 # .bash_profile
 
-if [ ! -v BASH_PROFILE_LOADED ]; then
+if [ -z $BASH_PROFILE_LOADED ]; then
   export BASH_PROFILE_LOADED=TRUE
 
   # setting for JAVA
