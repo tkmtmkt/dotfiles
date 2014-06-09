@@ -1,5 +1,6 @@
-vimfiles/.*
-vimfiles/bundle/.*
+_vim/.*
+_vim/bundle/.*
+_vim/tmp
 
 # sbt specific
 _sbt/boot/
