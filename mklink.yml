@@ -1,0 +1,22 @@
+#
+# usage: ansible-playbook mklink.yml
+#
+- hosts: localhost
+  vars:
+  tasks:
+    - name: シンボリックリンク作成
+      file: src=git/dotfiles/_{{item}} dest=~/.{{item}} state=link
+      with_items:
+        - bash_aliases
+        - bash_profile
+        - bashrc
+        - gitconfig
+        - gitexclude
+        - hgrc
+        - lein
+        - sbt
+        - tmux.conf
+        - vim
+        - vimrc
+
+# vim: set ts=2 sw=2 et:
