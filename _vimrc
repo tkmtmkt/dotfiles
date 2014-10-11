@@ -373,25 +373,28 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 " recommended to install
-NeoBundle 'Shougo/vimproc'
+NeoBundleFetch 'Shougo/vimproc'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/unite.vim.vim'
-NeoBundle 'Shougo/neocomplcache.vim.vim'
+NeoBundleFetch 'Shougo/vimshell.vim'
+NeoBundleFetch 'Shougo/unite.vim.vim'
+NeoBundleFetch 'Shougo/neocomplcache.vim.vim'
 "
-NeoBundle 'vim-scripts/sudo.vim'
+NeoBundleFetch 'vim-scripts/sudo.vim'
 "
-NeoBundle 'scrooloose/syntastic'
+NeoBundleFetch 'scrooloose/syntastic'
 "
-NeoBundle 'vim-scripts/VimClojure'
-NeoBundle 'PProvost/vim-ps1'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'martintreurnicht/vim-gradle'
+NeoBundleFetch 'vim-scripts/VimClojure'
+NeoBundleFetch 'PProvost/vim-ps1'
+NeoBundleFetch 'derekwyatt/vim-scala'
+NeoBundleFetch 'kchmck/vim-coffee-script'
+NeoBundleFetch 'martintreurnicht/vim-gradle'
+
+call neobundle#end()
 
 "pluginを使用可能にする
 filetype plugin indent on
