@@ -378,21 +378,21 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " recommended to install
-NeoBundleFetch 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundleFetch 'Shougo/vimshell.vim'
-NeoBundleFetch 'Shougo/unite.vim.vim'
-NeoBundleFetch 'Shougo/neocomplcache.vim.vim'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'Shougo/unite.vim.vim'
+NeoBundle 'Shougo/neocomplcache.vim.vim'
 "
-NeoBundleFetch 'vim-scripts/sudo.vim'
+NeoBundle 'vim-scripts/sudo.vim'
 "
-NeoBundleFetch 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 "
-NeoBundleFetch 'vim-scripts/VimClojure'
-NeoBundleFetch 'PProvost/vim-ps1'
-NeoBundleFetch 'derekwyatt/vim-scala'
-NeoBundleFetch 'kchmck/vim-coffee-script'
-NeoBundleFetch 'martintreurnicht/vim-gradle'
+NeoBundle 'vim-scripts/VimClojure'
+NeoBundle 'PProvost/vim-ps1'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'martintreurnicht/vim-gradle'
 
 call neobundle#end()
 
