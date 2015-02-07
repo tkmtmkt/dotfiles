@@ -1,8 +1,8 @@
 #
-# usage: ansible-playbook mklink.yml
+# usage: ansible-playbook mklink.yml -i hosts
 #
 - hosts: localhost
-  vars:
+  connection: local
   tasks:
     - name: シンボリックリンク作成
       file: src=git/dotfiles/_{{item}} dest=~/.{{item}} state=link
