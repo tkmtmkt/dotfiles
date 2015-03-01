@@ -42,4 +42,18 @@ Windows PowerShellコンソールにて以下実行
     cmd /c mklink -d vimfiles $HOME/vimfiles
     cmd /c mklink _vimrc $HOME/_vimrc
 
+
+参考
+----
+
+### デフォルトエディタをvimに設定する
+
+    sudo update-alternatives --config editor
+
+
+### ホームディレクトリの日本語ディレクトリを英語にする
+
+    LANG C xdg-user-dirs-gtk-update
+
+
 <!-- vim: set ts=4 sw=4 et:-->
