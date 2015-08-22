@@ -15,8 +15,14 @@ export EDITOR=vi
 
 #export DISPLAY=localhost:0.0
 
+# CentOS 6
 if [ -f /usr/share/gitcore/contrib/completion/git-prompt.sh ] ; then
   . /usr/share/gitcore/contrib/completion/git-prompt.sh
+fi
+
+# CentOS 7
+if [ -f /usr/share/git-core/contrib/completion/git-prompt.sh ] ; then
+  . /usr/share/git-core/contrib/completion/git-prompt.sh
 fi
 
 GIT_PS1_SHOWDIRTYSTATE=true
