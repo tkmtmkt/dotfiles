@@ -28,12 +28,15 @@
 [submodule "_vim/bundle/vim-scala"]
 	path = _vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
-[submodule "_vim/bundle/vim-coffee-script"]
-	path = _vim/bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "_vim/bundle/vim-gradle"]
 	path = _vim/bundle/vim-gradle
 	url = https://github.com/martintreurnicht/vim-gradle.git
+[submodule "_vim/bundle/vim-coffee-script"]
+	path = _vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "_vim/bundle/vim-slim"]
+	path = _vim/bundle/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
 [submodule "_vim/bundle/gtags.vim"]
 	path = _vim/bundle/gtags.vim
 	url = https://github.com/vim-scripts/gtags.vim.git
