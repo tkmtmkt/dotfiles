@@ -1,16 +1,18 @@
-_vim/.*
-_vim/bundle/.*
-_vim/tmp
+/_vim/.*
+/_vim/bundle/.*
+/_vim/tmp
 
 # sbt specific
-_sbt/boot/
-_sbt/repository/cache/
-org.scala-sbt/
-scala_2.9.2/
+*.lock
 staging/
 target/
-*.lock
+/_sbt/boot/
+/_sbt/repository/
+!/_sbt/repository/local/com.typesafe.sbt/sbt-git/
+!/_sbt/repository/local/com.eed3si9n/sbt-man/
+!/_sbt/repository/local/com.eed3si9n/sbt-dirty-money/
+!/_sbt/repository/local/com.orrsella/sbt-stats/
 
 # lein specific
-_lein/self-installs/
-_lein/repl-history
+/_lein/self-installs/
+/_lein/repl-history
