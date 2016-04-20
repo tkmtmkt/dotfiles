@@ -43,3 +43,6 @@
 [submodule "_vim/bundle/vim-git"]
 	path = _vim/bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
+[submodule "_vim/bundle/agit.vim"]
+	path = _vim/bundle/agit.vim
+	url = https://github.com/cohama/agit.vim.git
