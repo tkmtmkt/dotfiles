@@ -402,11 +402,11 @@ if has('vim_starting')
 endif
 
 " recommended to install
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc.vim'
 " after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 NeoBundle 'Shougo/vimshell.vim'
 " for editor
-NeoBundle 'Shougo/unite.vim.vim'
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache.vim.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'editorconfig/editorconfig-vim'
