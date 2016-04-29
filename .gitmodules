@@ -13,39 +13,39 @@
 [submodule "_vim/bundle/neocomplcache.vim"]
 	path = _vim/bundle/neocomplcache.vim
 	url = https://github.com/Shougo/neocomplcache.vim.git
-[submodule "_vim/bundle/sudo.vim"]
-	path = _vim/bundle/sudo.vim
-	url = https://github.com/vim-scripts/sudo.vim.git
 [submodule "_vim/bundle/syntastic"]
 	path = _vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "_vim/bundle/VimClojure"]
-	path = _vim/bundle/VimClojure
-	url = https://github.com/vim-scripts/VimClojure.git
+[submodule "_vim/bundle/editorconfig-vim"]
+	path = _vim/bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "_vim/bundle/vim-ps1"]
 	path = _vim/bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
 [submodule "_vim/bundle/vim-scala"]
 	path = _vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
-[submodule "_vim/bundle/vim-gradle"]
-	path = _vim/bundle/vim-gradle
-	url = https://github.com/martintreurnicht/vim-gradle.git
+[submodule "_vim/bundle/VimClojure"]
+	path = _vim/bundle/VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git
 [submodule "_vim/bundle/vim-coffee-script"]
 	path = _vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "_vim/bundle/vim-slim"]
 	path = _vim/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "_vim/bundle/vim-gradle"]
+	path = _vim/bundle/vim-gradle
+	url = https://github.com/martintreurnicht/vim-gradle.git
 [submodule "_vim/bundle/gtags.vim"]
 	path = _vim/bundle/gtags.vim
 	url = https://github.com/vim-scripts/gtags.vim.git
-[submodule "_vim/bundle/vim-git"]
-	path = _vim/bundle/vim-git
-	url = https://github.com/tpope/vim-git.git
+[submodule "_vim/bundle/sudo.vim"]
+	path = _vim/bundle/sudo.vim
+	url = https://github.com/vim-scripts/sudo.vim.git
 [submodule "_vim/bundle/agit.vim"]
 	path = _vim/bundle/agit.vim
 	url = https://github.com/cohama/agit.vim.git
-[submodule "_vim/bundle/editorconfig-vim"]
-	path = _vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "_vim/bundle/vim-git"]
+	path = _vim/bundle/vim-git
+	url = https://github.com/tpope/vim-git.git

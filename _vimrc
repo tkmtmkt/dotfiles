@@ -414,14 +414,14 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'vim-scripts/VimClojure'
-NeoBundle 'martintreurnicht/vim-gradle'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
 " utility
-NeoBundle 'tpope/vim-git'
-NeoBundle 'cohama/agit.vim'
+NeoBundle 'martintreurnicht/vim-gradle'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'vim-scripts/sudo.vim'
+NeoBundle 'cohama/agit.vim'
+NeoBundle 'tpope/vim-git'
 
 call neobundle#end()
 
