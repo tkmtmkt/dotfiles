@@ -411,6 +411,7 @@ NeoBundle 'Shougo/neocomplcache.vim.vim'
 NeoBundle 'vim-scripts/sudo.vim'
 "
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'editorconfig/editorconfig-vim'
 "
 NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'PProvost/vim-ps1'
