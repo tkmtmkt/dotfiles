@@ -21,6 +21,24 @@ if [ -z $BASH_PROFILE_LOADED ]; then
   [ -d $M2_HOME ] && \
   PATH=$M2_HOME/bin:$PATH
 
+  # setting for gradle
+  [ -d "$HOME/apps" ] && \
+  export GRADLE_HOME=`find ~/apps -type d -name gradle-* | sort -r | head -n 1`
+  [ -d $GRADLE_HOME ] && \
+  PATH=$GRADLE_HOME/bin:$PATH
+
+  # setting for groovy
+  [ -d "$HOME/apps" ] && \
+  export GROOVY_HOME=`find ~/apps -type d -name groovy-* | sort -r | head -n 1`
+  [ -d $GROOVY_HOME ] && \
+  PATH=$GROOVY_HOME/bin:$PATH
+
+  # setting for scala
+  [ -d "$HOME/apps" ] && \
+  export SCALA_HOME=`find ~/apps -type d -name scala-* | sort -r | head -n 1`
+  [ -d $SCALA_HOME ] && \
+  PATH=$SCALA_HOME/bin:$PATH
+
   # setting for playframefork
   [ -d "$HOME/git/playframework" ] && \
   PATH="$HOME/git/playframework:$PATH"
