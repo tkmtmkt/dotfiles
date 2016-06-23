@@ -9,6 +9,12 @@ if [ -z $BASH_PROFILE_LOADED ]; then
   [ -d $JAVA_HOME ] && \
   export CLASS_PATH=$JAVA_HOME/lib/tools.jar
 
+  # setting for gradle
+  [ -d "$HOME/apps" ] && \
+  export GRADLE_HOME=`find ~/apps -maxdepth 1 -type d -name gradle-* | sort -r | head -n 1`
+  [ -d $GRADLE_HOME ] && \
+  PATH=$GRADLE_HOME/bin:$PATH
+
   # setting for ant
   [ -d "$HOME/apps" ] && \
   export ANT_HOME=`find ~/apps -maxdepth 1 -type d -name apache-ant-* | sort -r | head -n 1`
@@ -21,12 +27,6 @@ if [ -z $BASH_PROFILE_LOADED ]; then
   [ -d $M2_HOME ] && \
   PATH=$M2_HOME/bin:$PATH
 
-  # setting for gradle
-  [ -d "$HOME/apps" ] && \
-  export GRADLE_HOME=`find ~/apps -maxdepth 1 -type d -name gradle-* | sort -r | head -n 1`
-  [ -d $GRADLE_HOME ] && \
-  PATH=$GRADLE_HOME/bin:$PATH
-
   # setting for groovy
   [ -d "$HOME/apps" ] && \
   export GROOVY_HOME=`find ~/apps -maxdepth 1 -type d -name groovy-* | sort -r | head -n 1`
@@ -38,6 +38,12 @@ if [ -z $BASH_PROFILE_LOADED ]; then
   export SCALA_HOME=`find ~/apps -maxdepth 1 -type d -name scala-* | sort -r | head -n 1`
   [ -d $SCALA_HOME ] && \
   PATH=$SCALA_HOME/bin:$PATH
+
+  # setting for BTrace
+  [ -d "$HOME/apps" ] && \
+  export BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
+  [ -d $BTRACE_HOME ] && \
+  PATH=$BTRACE_HOME/bin:$PATH
 
   # setting for playframefork
   [ -d "$HOME/git/playframework" ] && \
