@@ -413,6 +413,7 @@ NeoBundle 'editorconfig/editorconfig-vim'
 " language
 NeoBundle 'PProvost/vim-ps1'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'udalov/kotlin-vim'
 NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
