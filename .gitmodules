@@ -37,6 +37,9 @@
 [submodule "_vim/bundle/vim-slim"]
 	path = _vim/bundle/vim-slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "_vim/bundle/riv.vim"]
+	path = _vim/bundle/riv.vim
+	url = https://github.com/Rykka/riv.vim.git
 [submodule "_vim/bundle/vim-gradle"]
 	path = _vim/bundle/vim-gradle
 	url = https://github.com/martintreurnicht/vim-gradle.git
