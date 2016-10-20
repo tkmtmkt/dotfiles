@@ -96,6 +96,22 @@ $ rvm list known | head -20
 ```
 
 
+### Sbt
+
+```sh
+# ソースコード取得
+$ git https:// thub.com/sbt/sbt.git clone ~/git/sbt
+$ cd ~/git/sbt
+$ git checkout v0.13.12
+
+# ビルド
+$ sbt clean package
+
+# ファイル配置
+$ cp -rp ./launch/target/sbt-launch.jar ~/.sbt/
+```
+
+
 参考
 ----
 
