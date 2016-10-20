@@ -1,60 +1,47 @@
 # .bash_profile
 
-if [ -z $BASH_PROFILE_LOADED ]; then
+if [ -z "$BASH_PROFILE_LOADED" ]; then
   export BASH_PROFILE_LOADED=TRUE
 
+  if [ -d "$HOME/apps" ]; then
+    # setting for BTrace
+    BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
+    [ -n "$BTRACE_HOME" ] && PATH="$BTRACE_HOME/bin:$PATH"
+
+    # setting for ant
+    ANT_HOME=`find ~/apps -maxdepth 1 -type d -name apache-ant-* | sort -r | head -n 1`
+    [ -n "$ANT_HOME" ] && PATH="$ANT_HOME/bin:$PATH"
+
+    # setting for maven
+    M2_HOME=`find ~/apps -maxdepth 1 -type d -name apache-maven-* | sort -r | head -n 1`
+    [ -n "$M2_HOME" ] && PATH="$M2_HOME/bin:$PATH"
+
+    # setting for gradle
+    GRADLE_HOME=`find ~/apps -maxdepth 1 -type d -name gradle-* | sort -r | head -n 1`
+    [ -n "$GRADLE_HOME" ] && PATH="$GRADLE_HOME/bin:$PATH"
+
+    # setting for Anaconda3
+    ANACONDA_HOME=`find ~/apps -maxdepth 1 -type d -name anaconda3 | sort -r | head -n 1`
+    [ -n "$ANACONDA_HOME" ] && PATH="$ANACONDA_HOME/bin:$PATH"
+  fi
+
   # setting for JAVA
-  [ -d "/usr/lib/jvm" ] && \
-  export JAVA_HOME=`find /usr/lib/jvm -name javac | sed -e 's/.bin.javac//' | sort -r | head -n 1`
-  [ -d $JAVA_HOME ] && \
-  export CLASS_PATH=$JAVA_HOME/lib/tools.jar
+  if [ -d ~/apps/java/8 ]; then
+    export JAVA_HOME=~/apps/java/8
+  else
+    [ -d "/usr/lib/jvm" ] && \
+      export JAVA_HOME=`find /usr/lib/jvm -name javac | sed -e 's/.bin.javac//' | sort -r | head -n 1`
+  fi
+  [ -n "$JAVA_HOME" ] && PATH="$JAVA_HOME/bin:$PATH" && \
+    export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
 
-  # setting for gradle
-  [ -d "$HOME/apps" ] && \
-  export GRADLE_HOME=`find ~/apps -maxdepth 1 -type d -name gradle-* | sort -r | head -n 1`
-  [ -d $GRADLE_HOME ] && \
-  PATH=$GRADLE_HOME/bin:$PATH
+  # Load RVM function
+  [ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
 
-  # setting for ant
-  [ -d "$HOME/apps" ] && \
-  export ANT_HOME=`find ~/apps -maxdepth 1 -type d -name apache-ant-* | sort -r | head -n 1`
-  [ -d $ANT_HOME ] && \
-  PATH=$ANT_HOME/bin:$PATH
+  [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
-  # setting for maven
-  [ -d "$HOME/apps" ] && \
-  export M2_HOME=`find ~/apps -maxdepth 1 -type d -name apache-maven-* | sort -r | head -n 1`
-  [ -d $M2_HOME ] && \
-  PATH=$M2_HOME/bin:$PATH
-
-  # setting for groovy
-  [ -d "$HOME/apps" ] && \
-  export GROOVY_HOME=`find ~/apps -maxdepth 1 -type d -name groovy-* | sort -r | head -n 1`
-  [ -d $GROOVY_HOME ] && \
-  PATH=$GROOVY_HOME/bin:$PATH
-
-  # setting for scala
-  [ -d "$HOME/apps" ] && \
-  export SCALA_HOME=`find ~/apps -maxdepth 1 -type d -name scala-* | sort -r | head -n 1`
-  [ -d $SCALA_HOME ] && \
-  PATH=$SCALA_HOME/bin:$PATH
-
-  # setting for BTrace
-  [ -d "$HOME/apps" ] && \
-  export BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
-  [ -d $BTRACE_HOME ] && \
-  PATH=$BTRACE_HOME/bin:$PATH
-
-  # setting for playframefork
-  [ -d "$HOME/git/playframework" ] && \
-  PATH="$HOME/git/playframework:$PATH"
-
-  [ -d "$HOME/bin" ] && \
-  PATH="$HOME/bin:$PATH"
+  export PATH
 fi
-
-# Load RVM function
-[ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
 
 # Load user .bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
