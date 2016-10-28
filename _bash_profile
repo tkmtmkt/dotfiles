@@ -35,9 +35,6 @@ if [ -z "$BASH_PROFILE_LOADED" ]; then
   [ -n "$JAVA_HOME" ] && PATH="$JAVA_HOME/bin:$PATH" && \
     export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
 
-  # Load RVM function
-  [ -s ~/.rvm/scripts/rvm ] && . ~/.rvm/scripts/rvm
-
   [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
   export PATH
