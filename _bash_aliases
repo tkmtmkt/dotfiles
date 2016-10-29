@@ -4,9 +4,11 @@ alias lz='ls -Z'
 
 alias path='echo $PATH | sed "s/:/\n/g"'
 
-alias memo='vim ~/work/`date +"%Y/%m/%d/%Y%m%d.mkd"`'
+alias work_dir='echo ~/work/`date +"%Y/%m/%d"`'
 
-alias today='cd ~/work/`date +"%Y/%m/%d"`'
+alias work='[ ! -d `work_dir` ] && mkdir -p `work_dir`; pushd `work_dir`'
+
+alias memo='[ ! -d `work_dir` ] && mkdir -p `work_dir`; vim `work_dir`/`date +"%Y%m%d.mkd"`'
 
 alias fos='fossil'
 
