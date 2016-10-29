@@ -19,7 +19,7 @@ fi
 
 # settings for user bin
 if [ -d "$HOME/bin" ]; then
-  [ -n "$(echo $PATH | grep "$HOME/bin")" ] && PATH="$HOME/bin:$PATH"
+  [ -n "$(echo $PATH | grep -v "$HOME/bin")" ] && PATH="$HOME/bin:$PATH"
 fi
 
 export PATH
