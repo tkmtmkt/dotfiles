@@ -13,7 +13,6 @@
         - gitconfig
         - gitexclude
         - hgrc
-        - lein
         - sbt
         - tmux.conf
         - vim

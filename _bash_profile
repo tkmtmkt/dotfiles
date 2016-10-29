@@ -8,18 +8,6 @@ if [ -z "$BASH_PROFILE_LOADED" ]; then
     BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
     [ -n "$BTRACE_HOME" ] && PATH="$BTRACE_HOME/bin:$PATH"
 
-    # setting for ant
-    ANT_HOME=`find ~/apps -maxdepth 1 -type d -name apache-ant-* | sort -r | head -n 1`
-    [ -n "$ANT_HOME" ] && PATH="$ANT_HOME/bin:$PATH"
-
-    # setting for maven
-    M2_HOME=`find ~/apps -maxdepth 1 -type d -name apache-maven-* | sort -r | head -n 1`
-    [ -n "$M2_HOME" ] && PATH="$M2_HOME/bin:$PATH"
-
-    # setting for gradle
-    GRADLE_HOME=`find ~/apps -maxdepth 1 -type d -name gradle-* | sort -r | head -n 1`
-    [ -n "$GRADLE_HOME" ] && PATH="$GRADLE_HOME/bin:$PATH"
-
     # setting for Anaconda3
     ANACONDA_HOME=`find ~/apps -maxdepth 1 -type d -name anaconda3 | sort -r | head -n 1`
     [ -n "$ANACONDA_HOME" ] && PATH="$ANACONDA_HOME/bin:$PATH"

@@ -8,8 +8,6 @@ alias today='cd ~/work/`date +"%Y/%m/%d"`'
 
 alias fos='fossil'
 
-alias sbt='~/.sbt/sbt'
-
-alias lein='~/.lein/lein'
+alias sbt='sbt -ivy ~/.sbt/repository'
 
 # vim: set ft=sh :
