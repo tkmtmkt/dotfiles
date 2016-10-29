@@ -1,0 +1,14 @@
+#!/bin/bash
+
+[ ! -d ~/log ] && mkdir ~/log
+
+if [ -z "$(tmux list-session 2> /dev/null)" ] ; then
+  TMUXCMD="tmux new-session"
+else
+  TMUXCMD="tmux attach-session"
+fi
+
+echo "$TMUXCMD \; set set-titles on \; set set-titles-string $HOSTNAME"
+$TMUXCMD \; set set-titles on \; set set-titles-string $HOSTNAME
+
+# vim: set ts=2 sw=2 et:
