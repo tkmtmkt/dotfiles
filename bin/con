@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ ! -d ~/log ] && mkdir ~/log
+[ ! -d ~/work/`date +"%Y/%m/%d"` ] && mkdir -p ~/work/`date +"%Y/%m/%d"`
 
 if [ -z "$(tmux list-session 2> /dev/null)" ] ; then
   TMUXCMD="tmux new-session"
