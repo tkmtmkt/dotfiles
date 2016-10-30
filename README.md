@@ -72,13 +72,36 @@ $ ln -sf $(ls -1 | grep 1.6.0) 6
 ```
 
 
+### SDKMAN
+
+* [SDKMAN! the Software Development Kit Manager](http://sdkman.io/index.html)
+
+```sh
+# SDKMANインストール
+$ curl -s "https://get.sdkman.io" | bash
+
+# ツールインストール
+$ sdk install gradle
+$ sdk install sbt
+$ sdk install scala
+$ sdk install kotlin
+$ sdk install leiningen
+$ sdk install maven
+$ sdk install ant
+```
+
+
 ### Python
 
 * [Anaconda - Open Data Science Core](https://www.continuum.io/)
 
 ```sh
+# Anacondaインストール
 $ sh Anaconda3-4.2.0-Linux-x86_64.sh -p ~/apps/anaconda3
 
+# パッケージ更新
+$ conda update conda
+$ conda update --all
 ```
 
 
@@ -87,28 +110,16 @@ $ sh Anaconda3-4.2.0-Linux-x86_64.sh -p ~/apps/anaconda3
 * [RVM: Ruby Version Manager](https://rvm.io/)
 
 ```sh
-# install RVM
+# RVMインストール
 $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 $ curl -sSL https://get.rvm.io | bash -s stable
 
-# install Ruby
+# RVM更新
+$ rvm get stable
+
+# Rubyインストール
 $ rvm list known | head -20
-```
-
-
-### Sbt
-
-```sh
-# ソースコード取得
-$ git https:// thub.com/sbt/sbt.git clone ~/git/sbt
-$ cd ~/git/sbt
-$ git checkout v0.13.12
-
-# ビルド
-$ sbt clean package
-
-# ファイル配置
-$ cp -rp ./launch/target/sbt-launch.jar ~/.sbt/
+$ rvm install 2.3
 ```
 
 
