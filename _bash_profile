@@ -8,19 +8,27 @@ if [ -d "$HOME/apps" ]; then
   # setting for Anaconda3
   ANACONDA_HOME=`find ~/apps -maxdepth 1 -type d -name anaconda3 | sort -r | head -n 1`
   [ -n "$(echo $PATH | grep -v "$ANACONDA_HOME")" ] && PATH="$ANACONDA_HOME/bin:$PATH"
-fi
 
-# setting for JAVA
-if [ -d "$HOME/apps/java/8" ]; then
-  export JAVA_HOME="$HOME/apps/java/8"
-  export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
-  [ -n "$(echo $PATH | grep -v "$JAVA_HOME")" ] && PATH="$JAVA_HOME/bin:$PATH"
+  # setting for JAVA
+  if [ -d "$HOME/apps/java/8" ]; then
+    export JAVA_HOME="$HOME/apps/java/8"
+    export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
+    [ -n "$(echo $PATH | grep -v "$JAVA_HOME")" ] && PATH="$JAVA_HOME/bin:$PATH"
+  fi
 fi
 
 # settings for user bin
 if [ -d "$HOME/bin" ]; then
   [ -n "$(echo $PATH | grep -v "$HOME/bin")" ] && PATH="$HOME/bin:$PATH"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export PATH
 
