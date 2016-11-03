@@ -1,17 +1,24 @@
 # .bash_profile
 
+if [ -x /usr/bin/dircolors ]; then
+  alias ls='ls --color=auto -F'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+alias ll='ls -alF'
+alias la='ls -A'
 alias lz='ls -Z'
+alias l='ls -CF'
+
+alias less="less -R "
+alias ..="cd .."
 
 alias path='echo $PATH | sed "s/:/\n/g"'
-
 alias work_dir='echo ~/work/`date +"%Y/%m/%d"`'
-
 alias work='[ ! -d `work_dir` ] && mkdir -p `work_dir`; pushd `work_dir`'
-
 alias memo='[ ! -d `work_dir` ] && mkdir -p `work_dir`; vim `work_dir`/`date +"%Y%m%d.mkd"`'
-
-alias fos='fossil'
-
 alias sbt='sbt -ivy ~/.sbt/repository'
+alias fos='fossil'
 
 # vim: set ft=sh :
