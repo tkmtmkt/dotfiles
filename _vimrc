@@ -421,6 +421,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Rykka/riv.vim'
 " utility
 NeoBundle 'martintreurnicht/vim-gradle'
+NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'vim-scripts/gtags.vim'
 NeoBundle 'vim-scripts/sudo.vim'
 NeoBundle 'cohama/agit.vim'
