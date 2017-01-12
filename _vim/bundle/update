@@ -7,11 +7,11 @@ pushd $BASE
 for f in $(ls)
 do
     if [ -d $f ] ; then
-        echo "### $f ###"
-        pushd "$f"
+        echo -e "\n### $f ###"
+        pushd "$f" > /dev/null
         git co master
         git pull
-        popd
+        popd > /dev/null
     fi
 done
 
