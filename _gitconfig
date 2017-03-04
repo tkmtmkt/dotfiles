@@ -21,7 +21,7 @@
 	ui = true
 
 [push]
-	default = upstream       # defaultのpush先はtrackingしているリポジトリ
+	default = simple
 
 [pull]
 	rebase = true            # git pull --rebase
