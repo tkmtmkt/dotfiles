@@ -1,0 +1,31 @@
+# エスケープキー
+escape ^Tt
+
+fit
+
+# 現在のウィンドウに対する可視ベルの設定
+vbell on
+
+# ハングアップしたときにscreenを自動的にデタッチする
+autodetach on
+
+# 起動時の著作権表示
+startup_message off
+
+# スクロールバッファ
+defscrollback 100000
+
+# 画面下部のステータス表示
+hardstatus alwayslastline '%{= kw}[%m/%d %02c] %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
+
+# 背景色消去
+defbce on
+
+# alternate screen設定
+altscreen on
+
+# ターミナル
+term xterm-256color
+
+# シェルタイトル
+shelltitle '$ |bash'
