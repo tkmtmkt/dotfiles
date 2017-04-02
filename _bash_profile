@@ -1,5 +1,4 @@
-# .bash_profile
-
+#!/bin/bash
 if [ -d "$HOME/apps" ]; then
   # setting for BTrace
   BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
@@ -15,6 +14,21 @@ if [ -d "$HOME/apps" ]; then
     export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
     [ -n "$(echo $PATH | grep -v "$JAVA_HOME")" ] && PATH="$JAVA_HOME/bin:$PATH"
   fi
+fi
+
+# settings for ToolBox
+export TOOLBOX_DIR=/opt/toolbox
+if [ -d "$TOOLBOX_DIR" ]; then
+  # PATH
+  [ -n "$(echo $PATH | grep -v "$TOOLBOX_DIR/bin")" ] && PATH="$TOOLBOX_DIR/bin:$PATH"
+  # MANPATH
+  [ -z $MANPATH ] && \
+    export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:"
+  # LD_LIBRARY_PATH
+  [ -z $LD_LIBRARY_PATH ] && \
+    export LD_LIBRARY_PATH="$TOOLBOX_DIR/lib"
+  [ -n "$(echo $LD_LIBRARY_PATH | grep -v "$TOOLBOX_DIR/lib")" ] && \
+    export LD_LIBRARY_PATH="$TOOLBOX_DIR/lib:$LD_LIBRARY_PATH"
 fi
 
 # Add RVM to PATH for scripting
