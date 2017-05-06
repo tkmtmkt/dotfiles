@@ -1,49 +1,49 @@
 #!/bin/bash
-if [ -d "$HOME/apps" ]; then
-  # setting for BTrace
-  BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
-  [ -n "$(echo $PATH | grep -v "$BTRACE_HOME")" ] && PATH="$BTRACE_HOME/bin:$PATH"
-
+if [[ -d "$HOME/apps" ]]; then
   # setting for Anaconda3
   ANACONDA_HOME=`find ~/apps -maxdepth 1 -type d -name anaconda3 | sort -r | head -n 1`
-  [ -n "$(echo $PATH | grep -v "$ANACONDA_HOME")" ] && PATH="$ANACONDA_HOME/bin:$PATH"
+  [[ -n "$(echo $PATH | grep -v "$ANACONDA_HOME")" ]] && PATH="$ANACONDA_HOME/bin:$PATH"
 
   # setting for JAVA
-  if [ -d "$HOME/apps/java/8" ]; then
+  if [[ -d "$HOME/apps/java/8" ]]; then
     export JAVA_HOME="$HOME/apps/java/8"
     export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
-    [ -n "$(echo $PATH | grep -v "$JAVA_HOME")" ] && PATH="$JAVA_HOME/bin:$PATH"
+    [[ -n "$(echo $PATH | grep -v "$JAVA_HOME")" ]] && PATH="$JAVA_HOME/bin:$PATH"
   fi
+
+  # setting for BTrace
+  BTRACE_HOME=`find ~/apps -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
+  [[ -n "$(echo $PATH | grep -v "$BTRACE_HOME")" ]] && PATH="$BTRACE_HOME/bin:$PATH"
 fi
 
 # settings for ToolBox
 export TOOLBOX_DIR=/opt/toolbox
-if [ -d "$TOOLBOX_DIR" ]; then
+if [[ -d "$TOOLBOX_DIR" ]]; then
   # PATH
-  [ -n "$(echo $PATH | grep -v "$TOOLBOX_DIR/bin")" ] && PATH="$TOOLBOX_DIR/bin:$PATH"
+  [[ -n "$(echo $PATH | grep -v "$TOOLBOX_DIR/bin")" ]] && PATH="$TOOLBOX_DIR/bin:$PATH"
   # MANPATH
-  [ -z $MANPATH ] && \
+  [[ -z $MANPATH ]] && \
     export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:"
   # LD_LIBRARY_PATH
-  [ -z $LD_LIBRARY_PATH ] && \
+  [[ -z $LD_LIBRARY_PATH ]] && \
     export LD_LIBRARY_PATH="$TOOLBOX_DIR/lib"
-  [ -n "$(echo $LD_LIBRARY_PATH | grep -v "$TOOLBOX_DIR/lib")" ] && \
+  [[ -n "$(echo $LD_LIBRARY_PATH | grep -v "$TOOLBOX_DIR/lib")" ]] && \
     export LD_LIBRARY_PATH="$TOOLBOX_DIR/lib:$LD_LIBRARY_PATH"
 fi
 
 # Add RVM to PATH for scripting
-if [ -d "$HOME/.rvm/bin" ]; then
-  [ -n "$(echo $PATH | grep -v "$HOME/.rvm/bin")" ] && PATH="$HOME/.rvm/bin:$PATH"
+if [[ -d "$HOME/.rvm/bin" ]]; then
+  [[ -n "$(echo $PATH | grep -v "$HOME/.rvm/bin")" ]] && PATH="$HOME/.rvm/bin:$PATH"
 fi
 
 # settings for user bin
-if [ -d "$HOME/bin" ]; then
-  [ -n "$(echo $PATH | grep -v "$HOME/bin")" ] && PATH="$HOME/bin:$PATH"
+if [[ -d "$HOME/bin" ]]; then
+  [[ -n "$(echo $PATH | grep -v "$HOME/bin")" ]] && PATH="$HOME/bin:$PATH"
 fi
 
 export PATH
 
 # Load user .bashrc
-[ -f ~/.bashrc ] && . ~/.bashrc
+[[ -f ~/.bashrc ]] && . ~/.bashrc
 
 # vim: set ft=sh ts=2 sw=2 et:

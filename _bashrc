@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Source original definitions
-if [ -f /etc/skel/.bashrc ] ; then
+if [[ -f /etc/skel/.bashrc ]] ; then
   . /etc/skel/.bashrc
 fi
 
 export LANG=ja_JP.UTF-8
 
-if [ $TERM == "linux" ] ; then
+if [[ $TERM == "linux" ]] ; then
   export LC_MESSAGES=C
 fi
 
@@ -15,11 +15,11 @@ export EDITOR=vi
 
 #export DISPLAY=localhost:0.0
 
-if [ -f ~/.bash_aliases ] ; then
+if [[ -f ~/.bash_aliases ]] ; then
   . ~/.bash_aliases
 fi
 
-if [ -d "$TOOLBOX_DIR" ]; then
+if [[ -d "$TOOLBOX_DIR" ]]; then
   [[ -s "$TOOLBOX_DIR/share/git-core/contrib/completion/git-completion.bash" ]] && \
       . "$TOOLBOX_DIR/share/git-core/contrib/completion/git-completion.bash"
   [[ -s "$TOOLBOX_DIR/share/git-core/contrib/completion/git-prompt.sh" ]] && \
