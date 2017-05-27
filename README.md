@@ -123,6 +123,30 @@ $ rvm install 2.3
 ```
 
 
+### Node
+
+* https://github.com/creationix/nvm
+
+```sh
+# NVMインストール
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+# nodeインストール
+$ nvm ls-remote
+$ nvm install --lts
+$ nvm install v7.10
+
+# nodeバージョンデフォルト設定
+$ nvm alias default v7.10
+
+# nodeバージョン切り替え
+$ nvm use default
+$ nvm use --lts
+$ nvm use v7.10
+$ nvm ls
+```
+
+
 参考
 ----
 
