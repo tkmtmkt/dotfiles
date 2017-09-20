@@ -52,16 +52,18 @@ scriptencoding utf-8
 "set writebackupを指定してもオプション 'backup' がオンでない限り、
 "バックアップは上書きに成功した後に削除される。
 set nowritebackup
-"バックアップ/スワップファイルを作成する/しない
-set nobackup
+"バックアップを作成する/しない
+set backup
+set backupdir=/tmp
+"スワップファイルを作成する/しない
+set swapfile
+set directory=/tmp
 if version >= 703
   "再読込、vim終了後も継続するアンドゥ(7.3)
   set undofile
   "アンドゥの保存場所(7.3)
-  set undodir=$MY_VIMRUNTIME/tmp
+  set undodir=/tmp
 endif
-"set noswapfile
-set directory=$MY_VIMRUNTIME/tmp
 "viminfoを作成しない
 "set viminfo=
 "クリップボードを共有
