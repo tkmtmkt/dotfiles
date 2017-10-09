@@ -6,13 +6,3 @@
 *.lock
 staging/
 target/
-/_sbt/boot/
-/_sbt/repository/
-!/_sbt/repository/local/com.typesafe.sbt/sbt-git/
-!/_sbt/repository/local/com.eed3si9n/sbt-man/
-!/_sbt/repository/local/com.eed3si9n/sbt-dirty-money/
-!/_sbt/repository/local/com.orrsella/sbt-stats/
-
-# lein specific
-/_lein/self-installs/
-/_lein/repl-history
