@@ -28,7 +28,7 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
   [[ -z $LD_LIBRARY_PATH ]] && \
     export LD_LIBRARY_PATH="$TOOLBOX_DIR/lib"
   [[ -n "$(echo $LD_LIBRARY_PATH | grep -v "$TOOLBOX_DIR/lib")" ]] && \
-    export LD_LIBRARY_PATH="$TOOLBOX_DIR/lib:$LD_LIBRARY_PATH"
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$TOOLBOX_DIR/lib"
 fi
 
 # Add RVM to PATH for scripting
