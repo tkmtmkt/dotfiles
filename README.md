@@ -7,7 +7,7 @@
 dotfilesをチェックアウトする。
 
 ```sh
-$ git clone git://github.com/tkmtmkt/dotfiles.git ~/git/dotfiles
+$ git clone git://github.com/tkmtmkt/dotfiles.git ~/.dotfiles
 
 ```
 
@@ -15,7 +15,7 @@ $ git clone git://github.com/tkmtmkt/dotfiles.git ~/git/dotfiles
 以下のコマンドも実行する。
 
 ```sh
-$ cd ~/git/dotfiles
+$ cd ~/.dotfiles
 
 # .gitmodule の submodule 設定を .git/config に反映する。
 $ git submodule init
@@ -29,14 +29,14 @@ $ git submodule update
 
 ```sh
 # ansibleを使用できる場合
-$ cd ~/git/dotfiles
+$ cd ~/.dotfiles
 $ ansible-playbook mklink.yml -i hosts
 
 # ansibleを使用できない場合
 $ cd ~
-$ for f in $(find git/dotfiles -maxdepth 1 -name _*)
+$ for f in $(find .dotfiles -maxdepth 1 -name _*)
 do
-    l=$(echo $f | sed 's/git\/dotfiles\/_/./g')
+    l=$(echo $f | sed 's/dotfiles\/_//g')
     [ -e $l ] && mv $l{,.bak}
     ln -sf $f $l
 done
@@ -50,15 +50,17 @@ done
 ### Java
 
 * [Java SE - Downloads | Oracle Technology Network | Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Java Archive Downloads - Java SE 9](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html)
+* [Java Archive Downloads - Java SE 8](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 * [Java Archive Downloads - Java SE 7](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
 * [Java Archive Downloads - Java SE 6](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html)
 
 ```sh
-$ mkdir -p ~/apps/java
-$ cd ~/apps/java
+$ mkdir -p ~/tool/java
+$ cd ~/tool/java
 
 # java8
-$ tar zxvf jdk-8u111-linux-x64.tar.gz
+$ tar zxvf jdk-8u151-linux-x64.tar.gz
 $ ln -sf $(ls -1 | grep 1.8.0) 8
 
 # java7
@@ -97,7 +99,7 @@ $ sdk install ant
 
 ```sh
 # Anacondaインストール
-$ sh Anaconda3-4.2.0-Linux-x86_64.sh -p ~/apps/anaconda3
+$ sh Anaconda3-5.1.0-Linux-x86_64.sh -p ~/tool/anaconda3
 
 # パッケージ更新
 $ conda update conda
@@ -119,7 +121,7 @@ $ rvm get stable
 
 # Rubyインストール
 $ rvm list known | head -20
-$ rvm install 2.3
+$ rvm install 2.4
 ```
 
 
