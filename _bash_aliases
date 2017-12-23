@@ -10,6 +10,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias lz='ls -Z'
 alias l='ls -CF'
+alias ltr='ls -ltr'
 
 alias less="less -R "
 alias ..="cd .."
