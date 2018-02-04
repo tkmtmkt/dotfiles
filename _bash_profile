@@ -26,11 +26,6 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
     export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:"
 fi
 
-# Add RVM to PATH for scripting
-if [[ -d "$HOME/.rvm/bin" ]]; then
-  [[ -n "$(echo $PATH | grep -v "$HOME/.rvm/bin")" ]] && PATH="$HOME/.rvm/bin:$PATH"
-fi
-
 # settings for user bin
 if [[ -d "$HOME/bin" ]]; then
   [[ -n "$(echo $PATH | grep -v "$HOME/bin")" ]] && PATH="$HOME/bin:$PATH"
