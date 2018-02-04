@@ -17,7 +17,7 @@ if [[ -d "$HOME/tool" ]]; then
 fi
 
 # settings for ToolBox
-export TOOLBOX_DIR="$HOME/usr/local"
+export TOOLBOX_DIR="/opt/toolbox"
 if [[ -d "$TOOLBOX_DIR" ]]; then
   # PATH
   [[ -n "$(echo $PATH | grep -v "$TOOLBOX_DIR/bin")" ]] && PATH="$TOOLBOX_DIR/bin:$PATH"
