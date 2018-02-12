@@ -1,37 +1,77 @@
 #!/bin/bash
-if [[ -d "$HOME/tool" ]]; then
-  # setting for Anaconda3
-  ANACONDA_HOME=`find ~/tool -maxdepth 1 -type d -name anaconda3 | sort -r | head -n 1`
-  [[ -n "$(echo $PATH | grep -v "$ANACONDA_HOME")" ]] && PATH="$ANACONDA_HOME/bin:$PATH"
+pathmunge () {
+  case ":${PATH}:" in
+    *:"$1":*)
+      ;;
+    *)
+      if [ "$2" = "after" ] ; then
+        PATH=$PATH:$1
+      else
+        PATH=$1:$PATH
+      fi
+  esac
+}
 
-  # setting for JAVA
-  if [[ -d "$HOME/tool/java/8" ]]; then
-    export JAVA_HOME="$HOME/tool/java/8"
-    export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
-    [[ -n "$(echo $PATH | grep -v "$JAVA_HOME")" ]] && PATH="$JAVA_HOME/bin:$PATH"
+add_toolpath () {
+  dir=`find "$HOME/opt" -maxdepth 1 -type d -name $1 2> /dev/null | sort -r | head -n 1`
+  if [[ ! -d "$dir" ]]; then
+    dir=`find "/opt" -maxdepth 1 -type d -name $1 2> /dev/null | sort -r | head -n 1`
   fi
-
-  # setting for BTrace
-  BTRACE_HOME=`find ~/tool -maxdepth 1 -type d -name btrace-* | sort -r | head -n 1`
-  [[ -n "$(echo $PATH | grep -v "$BTRACE_HOME")" ]] && PATH="$BTRACE_HOME/bin:$PATH"
-fi
+  if [[ -d "$dir" ]]; then
+    if [[ "$2" = "bin" ]]; then
+      pathmunge $dir/bin
+    else
+      pathmunge $dir
+    fi
+  fi
+}
 
 # settings for ToolBox
-export TOOLBOX_DIR="/opt/toolbox"
+TOOLBOX_DIR="$HOME/opt/toolbox"
+if [[ ! -d "$TOOLBOX_DIR" ]]; then
+  TOOLBOX_DIR="/opt/toolbox"
+fi
 if [[ -d "$TOOLBOX_DIR" ]]; then
+  export TOOLBOX_DIR
   # PATH
-  [[ -n "$(echo $PATH | grep -v "$TOOLBOX_DIR/bin")" ]] && PATH="$TOOLBOX_DIR/bin:$PATH"
+  pathmunge $TOOLBOX_DIR/bin
   # MANPATH
   [[ -z $MANPATH ]] && \
     export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:"
 fi
 
+# setting for JAVA
+JAVA_HOME="$HOME/opt/java/8"
+if [[ ! -d "$JAVA_HOME" ]]; then
+  JAVA_HOME="/opt/java/8"
+fi
+if [[ -d "$JAVA_HOME" ]]; then
+  export JAVA_HOME
+  export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
+  pathmunge $JAVA_HOME/bin
+fi
+
+# setting for tools
+add_toolpath neo4j-* bin
+add_toolpath mongodb-* bin
+add_toolpath spark-* bin
+add_toolpath phantomjs-* bin
+add_toolpath gatling-* bin
+add_toolpath apache-maven-* bin
+add_toolpath sbt-* bin
+add_toolpath gradle-* bin
+add_toolpath scala-* bin
+add_toolpath btrace-* bin
+add_toolpath anaconda3 bin
+
 # settings for user bin
 if [[ -d "$HOME/bin" ]]; then
-  [[ -n "$(echo $PATH | grep -v "$HOME/bin")" ]] && PATH="$HOME/bin:$PATH"
+  pathmunge $HOME/bin
 fi
 
 export PATH
+unset -f pathmunge
+unset -f add_toolpath
 
 # Load user .bashrc
 [[ -f ~/.bashrc ]] && . ~/.bashrc
