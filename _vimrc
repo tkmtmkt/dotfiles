@@ -443,4 +443,6 @@ endif
 "pluginを使用可能にする
 filetype plugin indent on
 
+let g:syntastic_check_on_wq = 0
+
 " vim: set ft=vim :
