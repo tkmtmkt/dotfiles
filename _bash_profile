@@ -64,6 +64,11 @@ add_toolpath scala-* bin
 add_toolpath btrace-* bin
 add_toolpath anaconda3 bin
 
+# Add RVM to PATH for scripting
+if [[ -d "$HOME/.rvm/bin" ]]; then
+  pathmunge $HOME/.rvm/bin
+fi
+
 # settings for user bin
 if [[ -d "$HOME/bin" ]]; then
   pathmunge $HOME/bin

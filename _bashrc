@@ -32,7 +32,6 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
 [\t]\$ '
 fi
 
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] &&
@@ -44,5 +43,9 @@ export NVM_DIR="$HOME/.nvm"
     . "$NVM_DIR/nvm.sh"
 [[ -s "$NVM_DIR/bash_completion" ]] &&
     . "$NVM_DIR/bash_completion"
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] &&
+    . "$HOME/.rvm/scripts/rvm"
 
 # vim: set ft=sh ts=2 sw=2 et:
