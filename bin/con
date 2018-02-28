@@ -2,10 +2,19 @@
 
 [ ! -d ~/work/`date +"%Y/%m/%d"` ] && mkdir -p ~/work/`date +"%Y/%m/%d"`
 
-if [ -z "$(tmux list-session 2> /dev/null)" ] ; then
-  TMUXCMD="tmux new-session"
+case "$1" in
+  "")
+    NAME=default
+    ;;
+  *)
+    NAME=$1
+    ;;
+esac
+
+if [ -z "$(tmux ls | grep $NAME 2> /dev/null)" ] ; then
+  TMUXCMD="tmux new-session -s $NAME"
 else
-  TMUXCMD="tmux attach-session"
+  TMUXCMD="tmux attach-session -t $NAME"
 fi
 
 echo "$TMUXCMD \; set set-titles on \; set set-titles-string $HOSTNAME"
