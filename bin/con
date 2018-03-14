@@ -11,7 +11,7 @@ case "$1" in
     ;;
 esac
 
-if [ -z "$(tmux ls | grep $NAME 2> /dev/null)" ] ; then
+if [ -z "$(tmux ls 2> /dev/null | grep ^$NAME:)" ] ; then
   TMUXCMD="tmux new-session -s $NAME"
 else
   TMUXCMD="tmux attach-session -t $NAME"
