@@ -448,4 +448,4 @@ filetype plugin indent on
 
 let g:syntastic_check_on_wq = 0
 
-" vim: set ft=vim :
+" vim: set ft=vim ts=2 sw=2 et:

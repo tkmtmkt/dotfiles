@@ -162,4 +162,4 @@ $ nvm ls
     LANG C xdg-user-dirs-gtk-update
 
 
-<!-- vim: set ts=4 sw=4 et:-->
+<!-- vim: set ft=markdown ts=4 sw=4 et: -->

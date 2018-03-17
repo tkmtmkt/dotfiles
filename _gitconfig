@@ -116,4 +116,4 @@
 	generic = <Ctrl-F> move-page-down
 	generic = <Ctrl-B> move-page-up
 
-# vim: set ts=4 sw=4 ft=gitconfig:
+# vim: set ft=gitconfig ts=4 sw=4 noet:

@@ -22,4 +22,4 @@ alias memo='[ ! -d `work_dir` ] && mkdir -p `work_dir`; vim `work_dir`/`date +"%
 alias sbt='sbt -ivy ~/.sbt/repository'
 alias fos='fossil'
 
-# vim: set ft=sh :
+# vim: set ft=sh ts=2 sw=2 et:
