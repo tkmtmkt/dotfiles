@@ -62,7 +62,7 @@ add_toolpath sbt-* bin
 add_toolpath gradle-* bin
 add_toolpath scala-* bin
 add_toolpath btrace-* bin
-add_toolpath anaconda3 bin
+#add_toolpath anaconda3 bin
 
 # Add RVM to PATH for scripting
 if [[ -d "$HOME/.rvm/bin" ]]; then
