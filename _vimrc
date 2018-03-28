@@ -414,12 +414,17 @@ if dein#load_state(s:dein_dir)
   " after install, turn shell ~/.vim/dein/repos/github.com/Shougo/vimproc.vim/, (n,g)make -f your_machines_makefile
   call dein#add('Shougo/vimshell.vim')
   " for editor
-  call dein#add('Shougo/unite.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
+  if has('nvim') || has('timers') && has('python3') && system('pip3 show neovim') !=# ''
+    call dein#add('Shougo/deoplete.nvim')
+    if !has('nvim')
+      call dein#add('roxma/nvim-yarp')
+      call dein#add('roxma/vim-hug-neovim-rpc')
+    endif
+    call dein#add('Shougo/neco-vim')
+    call dein#add('Shougo/neco-syntax')
+    call dein#add('ujihisa/neco-look')
   endif
+  call dein#add('Shougo/unite.vim')
   call dein#add('scrooloose/syntastic')
   call dein#add('editorconfig/editorconfig-vim')
   " language
@@ -443,9 +448,15 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-"pluginを使用可能にする
-filetype plugin indent on
+if dein#tap('deoplete.nvim')
+  let g:deoplete#enable_at_startup = 1
+elseif dein#tap('neocomplete.vim')
+  let g:neocomplete#enable_at_startup = 1
+endif
 
 let g:syntastic_check_on_wq = 0
+
+"pluginを使用可能にする
+filetype plugin indent on
 
 " vim: set ft=vim ts=2 sw=2 et:
