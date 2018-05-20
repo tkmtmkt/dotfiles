@@ -26,6 +26,19 @@ add_toolpath () {
   fi
 }
 
+# setting for tools
+add_toolpath neo4j-* bin
+add_toolpath mongodb-* bin
+add_toolpath spark-* bin
+add_toolpath phantomjs-* bin
+add_toolpath gatling-* bin
+add_toolpath apache-maven-* bin
+add_toolpath sbt-* bin
+add_toolpath gradle-* bin
+add_toolpath scala-* bin
+add_toolpath btrace-* bin
+add_toolpath anaconda3 bin
+
 # settings for ToolBox
 TOOLBOX_DIR="$HOME/opt/toolbox"
 if [[ ! -d "$TOOLBOX_DIR" ]]; then
@@ -50,19 +63,6 @@ if [[ -d "$JAVA_HOME" ]]; then
   export CLASS_PATH="$JAVA_HOME/lib/tools.jar"
   pathmunge $JAVA_HOME/bin
 fi
-
-# setting for tools
-add_toolpath neo4j-* bin
-add_toolpath mongodb-* bin
-add_toolpath spark-* bin
-add_toolpath phantomjs-* bin
-add_toolpath gatling-* bin
-add_toolpath apache-maven-* bin
-add_toolpath sbt-* bin
-add_toolpath gradle-* bin
-add_toolpath scala-* bin
-add_toolpath btrace-* bin
-#add_toolpath anaconda3 bin
 
 # Add RVM to PATH for scripting
 if [[ -d "$HOME/.rvm/bin" ]]; then
