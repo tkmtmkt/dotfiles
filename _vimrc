@@ -425,8 +425,17 @@ if dein#load_state(s:dein_dir)
     call dein#add('ujihisa/neco-look')
   endif
   call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('scrooloose/nerdtree')
   call dein#add('scrooloose/syntastic')
   call dein#add('editorconfig/editorconfig-vim')
+  " for edit
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('tomtom/tcomment_vim')
+  call dein#add('tpope/vim-surround')
+  call dein#add('t9md/vim-textmanip')
   " language
   call dein#add('PProvost/vim-ps1')
   call dein#add('derekwyatt/vim-scala')
