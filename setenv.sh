@@ -1,6 +1,15 @@
 #!/bin/bash
-echo -e "\n. ~/.dotfiles/_bash_profile" >> ~/.bash_profile
-echo -e "\n. ~/.dotfiles/_bashrc" >> ~/.bashrc
+while read NAME
+do
+  [[ -z $(grep -o "~/.dotfiles/_${NAME}" ~/.${NAME}) ]] &&
+    cat <<EOS >> ~/.${NAME}
+[[ -s ~/.dotfiles/_${NAME} ]] &&
+    . ~/.dotfiles/_${NAME}
+EOS
+done <<EOS
+bash_profile
+bashrc
+EOS
 
 while read NAME
 do
