@@ -25,27 +25,33 @@ $ git submodule update
 
 ```
 
-### シンボリックリンク作成 (Linux)
+### 環境設定
+
+環境設定用シェルスクリプトを実行する。
 
 ```sh
-# ansibleを使用できる場合
-$ cd ~/.dotfiles
-$ ansible-playbook mklink.yml -i hosts
-
-# ansibleを使用できない場合
-$ cd ~
-$ for f in $(find .dotfiles -maxdepth 1 -name _*)
-do
-    l=$(echo $f | sed 's/dotfiles\/_//g')
-    [ -e $l ] && mv $l{,.bak}
-    ln -sf $f $l
-done
-
+$ . ~/.dotfiles/setup.sh
 ```
 
 
 ツール
 ------
+
+### docker
+
+```sh
+$ curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o ~/.dotfiles/bin/docker-compose
+```
+
+
+### vim
+
+プラグインの更新（vimのコマンドラインモードで実行する）
+
+```
+:call dein#update()
+```
+
 
 ### Java
 
@@ -56,8 +62,8 @@ done
 * [Java Archive Downloads - Java SE 6](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html)
 
 ```sh
-$ mkdir -p ~/tool/java
-$ cd ~/tool/java
+$ mkdir -p ~/opt/java
+$ cd ~/opt/java
 
 # java8
 $ tar zxvf jdk-8u151-linux-x64.tar.gz
@@ -99,7 +105,7 @@ $ sdk install ant
 
 ```sh
 # Anacondaインストール
-$ sh Anaconda3-5.1.0-Linux-x86_64.sh -p ~/tool/anaconda3
+$ sh Anaconda3-5.1.0-Linux-x86_64.sh -p ~/opt/anaconda3
 
 # パッケージ更新
 $ conda update conda
