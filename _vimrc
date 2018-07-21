@@ -431,6 +431,8 @@ if dein#load_state(s:dein_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('scrooloose/syntastic')
   call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('vim-airline/vim-airline-themes')
   " for edit
   call dein#add('Shougo/neocomplete.vim')
   call dein#add('tomtom/tcomment_vim')
@@ -464,6 +466,16 @@ elseif dein#tap('neocomplete.vim')
 endif
 
 let g:syntastic_check_on_wq = 0
+
+let g:airline_symbols_ascii = 1
+let g:airline_powerline_fonts = 0
+let g:airline_theme = 'dark'
+let g:airline_section_c = "%{expand('%:~:gs?\\?/?')} %M"
+if has('iconv')
+  let g:airline_section_z = '[0x%{FencB()}] %#__accent_bold#(%v,%l)/%L%#__restore__#%6P'
+else
+  let g:airline_section_z =                '%#__accent_bold#(%v,%l)/%L%#__restore__#%6P'
+endif
 
 "pluginを使用可能にする
 filetype plugin indent on
