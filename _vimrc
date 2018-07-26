@@ -409,72 +409,19 @@ if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#add(s:dein_dir . '/dein.vim')
 
-  " recommended to install
-  call dein#add('Shougo/vimproc.vim')
-  " after install, turn shell ~/.vim/dein/repos/github.com/Shougo/vimproc.vim/, (n,g)make -f your_machines_makefile
-  call dein#add('Shougo/vimshell.vim')
-  " for editor
-  if has('nvim') || has('timers') && has('python3') && system('pip3 show neovim') !=# ''
-    call dein#add('Shougo/deoplete.nvim')
-    if !has('nvim')
-      call dein#add('roxma/nvim-yarp')
-      call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
-    call dein#add('Shougo/neco-vim')
-    call dein#add('Shougo/neco-syntax')
-    call dein#add('ujihisa/neco-look')
-  endif
-  call dein#add('Shougo/unite.vim')
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('scrooloose/syntastic')
-  call dein#add('editorconfig/editorconfig-vim')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('vim-airline/vim-airline-themes')
-  " for edit
-  call dein#add('Shougo/neocomplete.vim')
-  call dein#add('tomtom/tcomment_vim')
-  call dein#add('tpope/vim-surround')
-  call dein#add('t9md/vim-textmanip')
-  " language
-  call dein#add('PProvost/vim-ps1')
-  call dein#add('derekwyatt/vim-scala')
-  call dein#add('udalov/kotlin-vim')
-  call dein#add('vim-scripts/VimClojure')
-  call dein#add('elixir-lang/vim-elixir')
-  call dein#add('kchmck/vim-coffee-script')
-  call dein#add('slim-template/vim-slim')
-  call dein#add('Rykka/riv.vim')
-  " utility
-  call dein#add('martintreurnicht/vim-gradle')
-  call dein#add('ekalinin/Dockerfile.vim')
-  call dein#add('vim-scripts/gtags.vim')
-  call dein#add('vim-scripts/sudo.vim')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('cohama/agit.vim')
+  " 設定ファイル格納ディレクトリ
+  let s:dein_conf_dir = s:dein_dir . '/config'
+
+  " プラグイン読み込み
+  call dein#load_toml(s:dein_conf_dir . '/dein.toml',      {'lazy': 0})
+  call dein#load_toml(s:dein_conf_dir . '/dein_lazy.toml', {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
 endif
 
-if dein#tap('deoplete.nvim')
-  let g:deoplete#enable_at_startup = 1
-elseif dein#tap('neocomplete.vim')
-  let g:neocomplete#enable_at_startup = 1
-endif
-
-let g:syntastic_check_on_wq = 0
-
-let g:airline_symbols_ascii = 1
-let g:airline_powerline_fonts = 0
-let g:airline_theme = 'dark'
-let g:airline_section_c = "%{expand('%:~:gs?\\?/?')} %M"
-if has('iconv')
-  let g:airline_section_z = '[0x%{FencB()}] %#__accent_bold#(%v,%l)/%L%#__restore__#%6P'
-else
-  let g:airline_section_z =                '%#__accent_bold#(%v,%l)/%L%#__restore__#%6P'
+if dein#check_install()
+  call dein#install()
 endif
 
 "pluginを使用可能にする
