@@ -25,6 +25,10 @@ repo = 'Shougo/vimshell.vim'
 # after install, turn shell ~/.vim/dein/repos/github.com/Shougo/vimproc.vim/, (n,g)make -f your_machines_makefile
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+if   = '''has('python3')'''
+
+[[plugins]]
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
