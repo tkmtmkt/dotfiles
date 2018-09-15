@@ -30,7 +30,11 @@ $ git submodule update
 環境設定用シェルスクリプトを実行する。
 
 ```sh
-$ . ~/.dotfiles/setup.sh
+# 環境設定
+$ . ~/.dotfiles/set_env.sh
+
+# 設定確認
+$ py.test -v --tb=short ~/.dotfiles/test_env.py
 ```
 
 
@@ -176,5 +180,10 @@ $ nvm ls
 
     LANG C xdg-user-dirs-gtk-update
 
+
+### testinfra
+
+* [Testinfra test your infrastructure](https://testinfra.readthedocs.io/en/latest/)
+* [testinfra Documentation](https://media.readthedocs.org/pdf/testinfra/stable/testinfra.pdf)
 
 <!-- vim: set ft=markdown ts=4 sw=4 et: -->

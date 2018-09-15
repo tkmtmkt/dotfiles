@@ -2,7 +2,7 @@
 # vim: set ft=sh ts=2 sw=2 et:
 #
 # 使用方法
-# $ . setenv.sh
+# $ . ~/.dotfiles/set_env.sh
 #
 
 # .bash_profileに_bash_profile読み込み処理を追記する
