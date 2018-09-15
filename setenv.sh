@@ -1,16 +1,21 @@
 #!/bin/bash
-while read NAME
-do
-  [[ -z $(grep -o "~/.dotfiles/_${NAME}" ~/.${NAME}) ]] &&
-    cat <<EOS >> ~/.${NAME}
-[[ -s ~/.dotfiles/_${NAME} ]] &&
-    . ~/.dotfiles/_${NAME}
-EOS
-done <<EOS
-bash_profile
-bashrc
-EOS
+# vim: set ft=sh ts=2 sw=2 et:
+#
+# 使用方法
+# $ . setenv.sh
+#
 
+# .bash_profileに_bash_profile読み込み処理を追記する
+TMP="~/.dotfiles/_bash_profile"
+[[ -z $(grep -o "$TMP" ~/.bash_profile) ]] &&
+  echo "[[ -s $TMP ]] && . $TMP" >> ~/.bash_profile
+
+# .bashrcに_bashrc読み込み処理を追記する
+TMP="~/.dotfiles/_bashrc"
+[[ -z $(grep -o "$TMP" ~/.bashrc) ]] &&
+  echo "[[ -s $TMP ]] && . $TMP" >> ~/.bashrc
+
+# シンボリックリンクを作成する
 while read NAME
 do
   SOURCE=".dotfiles/_${NAME}"
@@ -25,5 +30,3 @@ tmux.conf
 vimrc
 vim
 EOS
-
-# vim: set ft=sh ts=2 sw=2 et:
