@@ -1,0 +1,13 @@
+;; vim: ft=lisp ts=2 sw=2 et:
+;;
+;; インストール
+;; $ sudo apt-get install -y uim-fep uim-anthy
+;;
+;; 使用方法
+;; $ uim-fep
+;;
+
+;; toggle input method key configuration
+(define default-im-name 'anthy)
+(define-key generic-on-key?  '("<Control>\\" "<Control> " "<Shift> " "<Alt> "))
+(define-key generic-off-key? '("<Control>\\" "<Control> " "<Shift> " "<Alt> "))
