@@ -27,6 +27,5 @@ bash_aliases
 gitconfig
 gitexclude
 tmux.conf
-vimrc
 vim
 EOS

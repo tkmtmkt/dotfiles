@@ -13,7 +13,6 @@ import os
     ("gitconfig"),
     ("gitexclude"),
     ("tmux.conf"),
-    ("vimrc"),
     ("vim"),
 ])
 def test_synlink(host, name):
