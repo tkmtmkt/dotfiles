@@ -16,9 +16,9 @@ alias less="less -R "
 alias ..="cd .."
 
 alias path='echo $PATH | sed "s/:/\n/g"'
-alias work_dir='echo ~/work/`date +"%Y/%m/%d"`'
-alias work='[ ! -d `work_dir` ] && mkdir -p `work_dir`; pushd `work_dir`'
-alias memo='[ ! -d `work_dir` ] && mkdir -p `work_dir`; vim `work_dir`/`date +"%Y%m%d.mkd"`'
+alias journal_dir='echo ~/journal/`date +"%Y/%m/%d"`'
+alias journal='[ ! -d `journal_dir` ] && mkdir -p `journal_dir`; pushd `journal_dir`'
+alias memo='[ ! -d `journal_dir` ] && mkdir -p `journal_dir`; vim `journal_dir`/`date +"%Y%m%d.mkd"`'
 alias sbt='sbt -ivy ~/.sbt/repository'
 alias fos='fossil'
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ ! -d ~/work/`date +"%Y/%m/%d"` ] && mkdir -p ~/work/`date +"%Y/%m/%d"`
+[ ! -d ~/journal/`date +"%Y/%m/%d"` ] && mkdir -p ~/journal/`date +"%Y/%m/%d"`
 
 case "$1" in
   "")
