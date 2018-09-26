@@ -167,8 +167,9 @@ endif
 
 "色テーマ設定
 "gvimの色テーマは.gvimrcで指定する
-colorscheme default
+"colorscheme default
 "colorscheme torte
+colorscheme molokai
 
 """"""""""""""""""""""""""""""
 "ステータスラインに文字コード等表示
