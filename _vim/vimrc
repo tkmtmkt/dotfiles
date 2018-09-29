@@ -165,12 +165,6 @@ if &t_Co > 2 || has('gui_running')
   syntax on
 endif
 
-"色テーマ設定
-"gvimの色テーマは.gvimrcで指定する
-"colorscheme default
-"colorscheme torte
-colorscheme molokai
-
 """"""""""""""""""""""""""""""
 "ステータスラインに文字コード等表示
 "iconvが使用可能の場合、カーソル上の文字コードをエンコードに応じた表示にするFencB()を使用
@@ -427,5 +421,13 @@ endif
 
 "pluginを使用可能にする
 filetype plugin indent on
+
+"色テーマ設定
+"gvimの色テーマは.gvimrcで指定する
+"colorscheme default
+colorscheme molokai
+"colorscheme railscast
+"colorscheme hybrid
+"set background=dark
 
 " vim: set ft=vim ts=2 sw=2 et:
