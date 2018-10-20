@@ -425,9 +425,12 @@ filetype plugin indent on
 "色テーマ設定
 "gvimの色テーマは.gvimrcで指定する
 "colorscheme default
-colorscheme molokai
-"colorscheme railscast
 "colorscheme hybrid
 "set background=dark
+if &diff
+  colorscheme railscasts
+else
+  colorscheme molokai
+endif
 
 " vim: set ft=vim ts=2 sw=2 et:
