@@ -181,6 +181,12 @@ $ nvm ls
     LANG C xdg-user-dirs-gtk-update
 
 
+### generate locale
+
+    localedef -i ja_JP -c -f UTF-8 -A /usr/share/locale/locale.alias ja_JP.UTF-8
+    localedef -i ja_JP -c -f SHIFT_JIS -A /usr/share/locale/locale.alias ja_JP.SJIS
+
+
 ### testinfra
 
 * [Testinfra test your infrastructure](https://testinfra.readthedocs.io/en/latest/)
