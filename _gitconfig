@@ -20,6 +20,9 @@
 	grep = auto
 	ui = true
 
+[diff]
+	algorithm = histogram    # git --diff-algorithm=histogram
+
 [push]
 	default = simple
 
