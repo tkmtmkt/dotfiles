@@ -103,15 +103,19 @@ $ sdk install ant
 
 ### Python
 
-* [Anaconda - Open Data Science Core](https://www.continuum.io/)
+#### Jupyterカーネル
+
+* [Apache Toree](https://toree.apache.org/docs/current/user/quick-start/) -
+  Toree is a kernel for the Jupyter Notebook platform providing interactively access to Apache Spark.
 
 ```sh
-# Anacondaインストール
-$ sh Anaconda3-5.1.0-Linux-x86_64.sh -p ~/opt/anaconda3
+$ jupyter toree install --spark_home=/usr/local/bin/apache-spark/
+```
 
-# パッケージ更新
-$ conda update conda
-$ conda update --all
+* [A Jupyter kernel for bash](https://github.com/takluyver/bash_kernel)
+
+```sh
+$ python -m bash_kernel.install
 ```
 
 
