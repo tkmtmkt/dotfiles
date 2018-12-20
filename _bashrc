@@ -28,12 +28,12 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
   [[ -s "$TOOLBOX_DIR/share/git-core/contrib/completion/git-prompt.sh" ]] && \
       . "$TOOLBOX_DIR/share/git-core/contrib/completion/git-prompt.sh"
   GIT_PS1_SHOWDIRTYSTATE=true
-  P0="\[\e[0;34m\]=> \$?\n"
+  P0="\[\e[0;31m\]=> \$?\n"
   P1="\[\e[4;32m\]\$(date +'%F %T %z') "
   P2="\[\e[4;36m\]\u@\h "
   P3="\[\e[4;33m\]\w "
   P4="\[\e[4;31m\]\$(__git_ps1)"
-  P5="\[\e[0m\]\n\$ "
+  P5="\[\e[0m\]\n\\\$ "
   export PS1=$P0$P1$P2$P3$P4$P5
 fi
 
