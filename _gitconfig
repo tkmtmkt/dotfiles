@@ -29,6 +29,9 @@
 [pull]
 	rebase = true            # git pull --rebase
 
+[diff]
+	algorithm=histogram
+
 [merge]
 	ff = false               # git merge --no-ff
 	tool = vimdiff
