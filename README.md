@@ -41,6 +41,29 @@ $ py.test -v --tb=short ~/.dotfiles/test_env.py
 ツール
 ------
 
+### ssh
+
+```
+$ cat <<'EOS' > ~/.ssh/config
+Host *
+  StrictHostKeyChecking no
+  IdentitiesOnly yes
+  TCPKeepAlive yes
+
+Host github.com
+  Hostname github.com
+  User git
+
+Host bitbucket.org
+  Hostname bitbucket.org
+  User git
+EOS
+
+$ cat <<'EOS' > ~/.ssh/rc
+echo ""$USER" has logged in from $SSH_CLIENT at `date` " | mail -s "SSH LOGIN INFO ({ホスト名})" {メールアドレス}
+EOS
+```
+
 ### docker
 
 * [docker-compose](https://docs.docker.com/compose/install/#install-compose)
