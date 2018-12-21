@@ -53,4 +53,5 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] &&
     . "$HOME/.rvm/scripts/rvm"
 
+:
 # vim: set ft=sh ts=2 sw=2 et:
