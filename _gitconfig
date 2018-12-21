@@ -38,6 +38,7 @@
 
 [alias]
 	st = status
+	stun = status --untracked-files=no
 	sh = show
 	so = remote show origin
 	ft = fetch
