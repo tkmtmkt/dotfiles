@@ -113,6 +113,9 @@ repo = 'cohama/agit.vim'
 # colorscheme
 ########################################
 [[plugins]]
+repo = 'aereal/vim-colors-japanesque'
+
+[[plugins]]
 repo = 'w0ng/vim-hybrid'
 
 [[plugins]]
