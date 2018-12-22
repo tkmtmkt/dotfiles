@@ -27,15 +27,15 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
       . "$TOOLBOX_DIR/share/git-core/contrib/completion/git-completion.bash"
   [[ -s "$TOOLBOX_DIR/share/git-core/contrib/completion/git-prompt.sh" ]] && \
       . "$TOOLBOX_DIR/share/git-core/contrib/completion/git-prompt.sh"
+  PG_="\[\e[4;31m\]\$(__git_ps1)"
   GIT_PS1_SHOWDIRTYSTATE=true
-  P0="\[\e[0;31m\]=> \$?\n"
-  P1="\[\e[4;32m\]\$(date +'%F %T %z') "
-  P2="\[\e[4;36m\]\u@\h "
-  P3="\[\e[4;33m\]\w "
-  P4="\[\e[4;31m\]\$(__git_ps1)"
-  P5="\[\e[0m\]\n\\\$ "
-  export PS1=$P0$P1$P2$P3$P4$P5
 fi
+PB_="\[\e[0;33m\]=> \$?\n"
+P1_="\[\e[4;32m\]\$(date +'%F %T %z') "
+P2_="\[\e[36m\]\u@\h:"
+P3_="\[\e[35m\]\w"
+PE_="\[\e[0m\]\n\\\$ "
+export PS1=$PB_$P1_$P2_$P3_$PG_$PE_
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -52,6 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] &&
     . "$HOME/.rvm/scripts/rvm"
-
 :
+
 # vim: set ft=sh ts=2 sw=2 et:
