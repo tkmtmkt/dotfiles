@@ -81,26 +81,20 @@ EOS
 ### Java
 
 * [Java SE - Downloads | Oracle Technology Network | Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* [Java Archive Downloads - Java SE 9](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase9-3934878.html)
+* [Java Archive Downloads - Java SE 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 * [Java Archive Downloads - Java SE 8](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-* [Java Archive Downloads - Java SE 7](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html)
-* [Java Archive Downloads - Java SE 6](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html)
 
 ```sh
 $ mkdir -p ~/opt/java
 $ cd ~/opt/java
 
+# java11
+$ tar xf jdk-11.0.1_linux-x64_bin.tar.gz
+$ ln -sf $(ls -1 | grep 1.11) 11
+
 # java8
-$ tar zxvf jdk-8u151-linux-x64.tar.gz
+$ tar xf jdk-8u181-linux-x64.tar.gz
 $ ln -sf $(ls -1 | grep 1.8.0) 8
-
-# java7
-$ tar zxvf jdk-7u80-linux-x64.tar.gz
-$ ln -sf $(ls -1 | grep 1.7.0) 7
-
-# java6
-$ sh jdk-6u45-linux-x64.bin
-$ ln -sf $(ls -1 | grep 1.6.0) 6
 
 ```
 
