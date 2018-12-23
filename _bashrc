@@ -1,18 +1,5 @@
 #!/bin/bash
 
-case "$TERM" in
-linux)
-  export LC_MESSAGES=C
-  ;;
-*)
-  export LANG=ja_JP.UTF-8
-  export TERM='screen-256color'
-  export DISPLAY=localhost:0.0
-  ;;
-esac
-
-export EDITOR=vim
-
 # Source original definitions
 if [[ -f /etc/skel/.bashrc ]] ; then
   . /etc/skel/.bashrc
@@ -30,12 +17,31 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
   PG_="\[\e[4;31m\]\$(__git_ps1)"
   GIT_PS1_SHOWDIRTYSTATE=true
 fi
-PB_="\[\e[0;33m\]=> \$?\n"
-P1_="\[\e[4;32m\]\$(date +'%F %T %z') "
-P2_="\[\e[36m\]\u@\h:"
-P3_="\[\e[35m\]\w"
-PE_="\[\e[0m\]\n\\\$ "
-export PS1=$PB_$P1_$P2_$P3_$PG_$PE_
+
+case "$TERM" in
+linux)
+  export LC_MESSAGES=C
+  PB_="\[\e[0;33m\]=> \$?\n"
+  P1_="\[\e[32m\]\$(date +'%F %T %z') "
+  P2_="\[\e[36m\]\u@\h:"
+  P3_="\[\e[35m\]\w"
+  PE_="\[\e[0m\]\n\\\$ "
+  export PS1=$PB_$P1_$P2_$P3_$PE_
+  ;;
+*)
+  export LANG=ja_JP.UTF-8
+  export TERM='screen-256color'
+  export DISPLAY=localhost:0.0
+  PB_="\[\e[0;33m\]=> \$?\n"
+  P1_="\[\e[4;32m\]\$(date +'%F %T %z') "
+  P2_="\[\e[36m\]\u@\h:"
+  P3_="\[\e[35m\]\w"
+  PE_="\[\e[0m\]\n\\\$ "
+  export PS1=$PB_$P1_$P2_$P3_$PG_$PE_
+  ;;
+esac
+
+export EDITOR=vim
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
