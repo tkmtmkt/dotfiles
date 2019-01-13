@@ -43,6 +43,11 @@ esac
 
 export EDITOR=vim
 
+# Enable .envrc file in directory
+if [[ -e "$(which direnv)" ]]; then
+  eval "$(direnv hook bash)"
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] &&
