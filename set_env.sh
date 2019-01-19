@@ -26,6 +26,7 @@ done <<EOS
 bash_aliases
 gitconfig
 gitexclude
+tigrc
 tmux.conf
 vim
 EOS
