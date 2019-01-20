@@ -257,8 +257,9 @@ nnoremap l <Right>
 if has('folding')
   nnoremap <expr> l foldlevel(line('.')) ? "\<Right>zo" : "\<Right>"
 endif
+"現在日時を挿入する
 nnoremap <F5> a<C-R>=strftime("%Y/%m/%d %H:%M")<CR><Esc>
-" GNU GLOBAL(gtags)
+"GNU GLOBAL(gtags)
 "   Ctrl-q 検索結果Windowを閉じる
 "   Ctrl-g ソースコードの grep
 "   Ctrl-l このファイルの関数一覧
@@ -267,13 +268,13 @@ nnoremap <F5> a<C-R>=strftime("%Y/%m/%d %H:%M")<CR><Esc>
 "   Ctrl-n 次の検索結果へジャンプする
 "   Ctrl-p 前の検索結果へジャンプする
 "----------------------------------------------------
-noremap <C-q> <C-w><C-w><C-w>q
-noremap <C-g> :Gtags -g
-noremap <C-l> :Gtags -f %<CR>
-noremap <C-j> :Gtags <C-r><C-w><CR>
-noremap <C-k> :Gtags -r <C-r><C-w><CR>
-noremap <C-n> :cn<CR>
-noremap <C-p> :cp<CR>
+nnoremap <C-q> <C-w><C-w><C-w>q
+nnoremap <C-g> :Gtags -g
+nnoremap <C-l> :Gtags -f %<CR>
+nnoremap <C-j> :Gtags <C-r><C-w><CR>
+nnoremap <C-k> :Gtags -r <C-r><C-w><CR>
+nnoremap <C-n> :cn<CR>
+nnoremap <C-p> :cp<CR>
 "vimgrep
 "   [q 前へ
 "   ]q 次へ
@@ -287,6 +288,7 @@ nnoremap ]Q :<C-u>clast<CR>
 "----------------------------------------
 " 挿入モード
 "----------------------------------------
+"現在日時を挿入する
 inoremap <expr> <F5> strftime("%Y/%m/%d %H:%M")
 
 "----------------------------------------
