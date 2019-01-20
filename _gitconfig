@@ -20,14 +20,11 @@
 	grep = auto
 	ui = true
 
-[diff]
-	algorithm = histogram    # git --diff-algorithm=histogram
-
 [pull]
 	rebase = true            # git pull --rebase
 
 [diff]
-	algorithm=histogram
+	algorithm = histogram    # git --diff-algorithm={patience|minimal|histogram|myers}
 
 [merge]
 	ff = false               # git merge --no-ff
