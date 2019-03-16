@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/docker/compose/releases
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 
 # Specify Config Transpiler version

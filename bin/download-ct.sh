@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://github.com/coreos/container-linux-config-transpiler/releases
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 
 # Specify Config Transpiler version
