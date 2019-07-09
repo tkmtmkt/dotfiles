@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
 let g:airline_symbols_ascii = 1
@@ -33,6 +36,8 @@ repo = 'Shougo/unite.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
+depends = 'context_filetype.vim'
+on_i = 1
 if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show neovim') !=# '' '''
 
 [[plugins]]
@@ -99,6 +104,9 @@ repo = 't9md/vim-textmanip'
 
 [[plugins]]
 repo = 'vim-scripts/gtags.vim'
+hook_add = '''
+let g:gen_tags#gtags_auto_gen = 1
+'''
 
 [[plugins]]
 repo = 'vim-scripts/sudo.vim'
