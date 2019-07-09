@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 
 # Specify Config Transpiler version
-VER=1.23.2
+VER=1.24.1
 
 # Specify OS
 OS=$(uname -s)
