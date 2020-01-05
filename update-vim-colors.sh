@@ -32,4 +32,5 @@ https://raw.githubusercontent.com/sjl/badwolf/master/colors/goodwolf.vim
 https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
 https://raw.githubusercontent.com/AlessandroYorba/Alduin/master/colors/alduin.vim
 https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+https://raw.githubusercontent.com/cocopon/iceberg.vim/master/colors/iceberg.vim
 EOS
