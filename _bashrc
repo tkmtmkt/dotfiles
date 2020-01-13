@@ -42,6 +42,7 @@ linux)
 esac
 
 export EDITOR=vim
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Enable .envrc file in directory
 if [[ -e "$(which direnv 2> /dev/null)" ]]; then

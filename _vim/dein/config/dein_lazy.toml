@@ -47,27 +47,37 @@ repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
+depends = 'context_filetype.vim'
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+hook_source = '''
+source ~/.config/nvim/plugins/neosnippet.rc.vim
+'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-depends = ['/context_filetype.vim']
+depends = ['context_filetype.vim']
 on_i = 1
-if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show neovim') != '' '''
+if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show pynvim') !=# '' '''
+on_event = 'InsertEnter'
+hook_source = '''
+source ~/.config/nvim/plugins/deoplete.rc.vim
+'''
 
 [[plugins]]
 repo = 'Shougo/neco-vim'
-depends = ['/deoplete']
+depends = ['deoplete']
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
-depends = ['/deoplete']
+depends = ['deoplete']
 
 [[plugins]]
 repo = 'ujihisa/neco-look'
-depends = ['/deoplete']
+depends = ['deoplete']
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'

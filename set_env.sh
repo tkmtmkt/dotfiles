@@ -30,4 +30,5 @@ gitexclude
 tigrc
 tmux.conf
 vim
+config
 EOS
