@@ -30,6 +30,9 @@ repo = 'Shougo/denite.nvim'
 depends = ['/nvim-yarp','/vim-hug-neovim-rpc']
 
 [[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
