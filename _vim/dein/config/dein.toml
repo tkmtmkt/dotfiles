@@ -31,11 +31,11 @@ if   = '''!has('nvim') && has('python3') && system('pip3 show pynvim') != '' '''
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
-depends = ['/vim-hug-neovim-rpc']
+depends = ['vim-hug-neovim-rpc']
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-depends = ['/nvim-yarp','/vim-hug-neovim-rpc']
+depends = ['nvim-yarp','vim-hug-neovim-rpc']
 
 [[plugins]]
 repo = 'w0rp/ale'
