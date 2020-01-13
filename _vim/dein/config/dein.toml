@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
 let g:airline_symbols_ascii = 1
@@ -21,74 +18,22 @@ endif
 '''
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-
-[[plugins]]
-repo = 'Shougo/vimshell.vim'
-# after install, turn shell ~/.vim/dein/repos/github.com/Shougo/vimproc.vim/, (n,g)make -f your_machines_makefile
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-if   = '''has('python3')'''
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = 'context_filetype.vim'
-on_i = 1
-if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show neovim') !=# '' '''
+repo = 'roxma/vim-hug-neovim-rpc'
+if   = '''!has('nvim') && has('python3') && system('pip3 show pynvim') != '' '''
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
-depends = ['/deoplete']
-if   = '''!has('nvim')'''
+depends = ['/vim-hug-neovim-rpc']
 
 [[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-depends = ['/deoplete']
-if   = '''!has('nvim')'''
-
-[[plugins]]
-repo = 'Shougo/neco-vim'
-depends = ['/deoplete']
-
-[[plugins]]
-repo = 'Shougo/neco-syntax'
-depends = ['/deoplete']
-
-[[plugins]]
-repo = 'ujihisa/neco-look'
-depends = ['/deoplete']
-
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-hook_add = '''
-if dein#tap('deoplete.nvim')
-  let g:deoplete#enable_at_startup = 1
-elseif dein#tap('neocomplete.vim')
-  let g:neocomplete#enable_at_startup = 1
-endif
-'''
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'Shougo/denite.nvim'
+depends = ['/nvim-yarp','/vim-hug-neovim-rpc']
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-
-[[plugins]]
-repo = 'scrooloose/syntastic'
-hook_add = '''
-let g:syntastic_check_on_wq = 0
-'''
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'

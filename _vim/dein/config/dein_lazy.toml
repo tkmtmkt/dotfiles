@@ -41,3 +41,40 @@ on_ft = ['gradle']
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = ['Dockerfile']
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = ['/context_filetype.vim']
+on_i = 1
+if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show neovim') != '' '''
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+depends = ['/deoplete']
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+depends = ['/deoplete']
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+depends = ['/deoplete']
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+hook_add = '''
+if dein#tap('deoplete.nvim')
+  let g:deoplete#enable_at_startup = 1
+elseif dein#tap('neocomplete.vim')
+  let g:neocomplete#enable_at_startup = 1
+endif
+'''
