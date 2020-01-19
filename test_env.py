@@ -4,14 +4,17 @@
 # 参考
 # $ pycodestyle test_env.py
 #
-import pytest
 import os
+import pytest
 
 
 # シンボリックリンクの確認
 @pytest.mark.parametrize("name", [
+    ("config"),
+    ("bash_aliases"),
     ("gitconfig"),
     ("gitexclude"),
+    ("tigrc"),
     ("tmux.conf"),
     ("vim"),
 ])
