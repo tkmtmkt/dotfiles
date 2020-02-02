@@ -69,15 +69,15 @@ source ~/.config/nvim/plugins/deoplete.rc.vim
 
 [[plugins]]
 repo = 'Shougo/neco-vim'
-depends = ['deoplete']
+depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'Shougo/neco-syntax'
-depends = ['deoplete']
+depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'ujihisa/neco-look'
-depends = ['deoplete']
+depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
