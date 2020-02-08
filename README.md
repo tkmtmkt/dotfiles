@@ -71,12 +71,17 @@ EOS
 
 ### vim
 
-プラグインの更新（vimのコマンドラインモードで実行する）
+プラグインを最新版に更新する。
 
 ```
 :call dein#update()
 ```
 
+~/.cache/deinを更新する。.dotfilesを展開した環境で実行する必要あり。
+
+```
+:call dein#recache_runtimepath()
+```
 
 ### Java
 
