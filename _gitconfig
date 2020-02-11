@@ -1,6 +1,5 @@
-[user]
-	name = Takamatsu Makoto
-	email = tkmtmkt@gmail.com
+[include]
+	path = ~/.gitconfig.local
 
 [core]
 	excludesfile = ~/.gitexclude  # globalな無視ファイル指定
