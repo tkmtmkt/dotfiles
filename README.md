@@ -31,7 +31,7 @@ $ git submodule update
 
 ```sh
 # 環境設定
-$ . ~/.dotfiles/set_env.sh
+$ . ~/.dotfiles/setenv.sh
 
 # 設定確認
 $ py.test -v --tb=short ~/.dotfiles/test_env.py
