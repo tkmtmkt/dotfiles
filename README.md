@@ -83,6 +83,14 @@ EOS
 :call dein#recache_runtimepath()
 ```
 
+### pwgen
+
+パスワード生成
+
+```sh
+$ pwgen -cnyB1 12 5
+```
+
 ### Java
 
 * [Java SE - Downloads | Oracle Technology Network | Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
