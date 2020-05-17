@@ -21,4 +21,4 @@ import pytest
 def test_synlink(host, name):
     home = os.environ["HOME"]
     assert host.file(f"{home}/.{name}").is_symlink
-    assert host.file(f"{home}/.{name}").linked_to == f"{home}/.dotfiles/_{name}"
+    assert host.file(f"{home}/.{name}").linked_to == f"/opt/dotfiles/_{name}"
