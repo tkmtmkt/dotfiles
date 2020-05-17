@@ -51,7 +51,7 @@ depends = 'context_filetype.vim'
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
 hook_source = '''
-source ~/.vim/plugin/neosnippet.rc.vim
+source ~/.vim/init/neosnippet.rc.vim
 '''
 
 [[plugins]]
@@ -64,7 +64,7 @@ on_i = 1
 if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show pynvim') !=# '' '''
 on_event = 'InsertEnter'
 hook_source = '''
-source ~/.vim/plugin/deoplete.rc.vim
+source ~/.vim/init/deoplete.rc.vim
 '''
 
 [[plugins]]
