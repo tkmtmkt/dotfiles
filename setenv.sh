@@ -10,7 +10,7 @@ SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 while read NAME
 do
   TMP="${SCRIPT_DIR}/_${NAME}"
-  [[ -z $(grep -o "${TMP}" ~/.${NAME}) ]] &&
+  [[ -z $(grep -o "${TMP}" ~/.${NAME} 2> /dev/null) ]] &&
     echo "[[ -s ${TMP} ]] && . ${TMP}" >> ~/.${NAME}
 done <<EOS
 profile
