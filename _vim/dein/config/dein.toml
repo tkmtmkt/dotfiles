@@ -38,6 +38,15 @@ repo = 'Shougo/denite.nvim'
 depends = ['nvim-yarp','vim-hug-neovim-rpc']
 
 [[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = 'context_filetype.vim'
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+hook_source = '''
+source ~/.vim/init/neosnippet.rc.vim
+'''
+
+[[plugins]]
 repo = 'w0rp/ale'
 
 [[plugins]]

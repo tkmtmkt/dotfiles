@@ -46,15 +46,6 @@ on_ft = ['Dockerfile']
 repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
-repo = 'Shougo/neosnippet.vim'
-depends = 'context_filetype.vim'
-on_event = 'InsertCharPre'
-on_ft = 'snippet'
-hook_source = '''
-source ~/.vim/init/neosnippet.rc.vim
-'''
-
-[[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
