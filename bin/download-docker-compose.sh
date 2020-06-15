@@ -3,7 +3,7 @@
 SCRIPT_DIR=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 
 # Specify Config Transpiler version
-VER=1.25.5
+VER=1.26.0
 
 # Specify OS
 OS=$(uname -s)
@@ -25,7 +25,7 @@ pushd ${SCRIPT_DIR}
 rm -f ${BIN_FILE} ${HASH_FILE}
 
 # Download docker-compose
-curl -ksSL ${DOWNLOAD_URL}/${VER}/${FILE_NAME} -o ${BIN_FILE}
+curl -kSL ${DOWNLOAD_URL}/${VER}/${FILE_NAME} -o ${BIN_FILE}
 chmod u+x ${BIN_FILE}
 
 # Download hash file and check
