@@ -440,4 +440,11 @@ endif
 "pluginを使用可能にする
 filetype plugin indent on
 
+"ファイル指定なしでVimを起動した場合にNERDTreeを表示する
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nnoremap [NERDTree] <Nop>
+nmap     <Space>n [NERDTree]
+nnoremap <silent> [NERDTree]t :<C-u> NERDTreeToggle<CR>
+nnoremap <silent> [NERDTree]v :<C-u> NERDTreeToggleVCS<CR>
+
 " vim: set ft=vim ts=2 sw=2 et:
