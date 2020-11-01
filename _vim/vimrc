@@ -165,10 +165,6 @@ set nowrap
 set termguicolors
 let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
-" ハイライトを有効にする
-if &t_Co > 2 || has('gui_running')
-  syntax on
-endif
 
 "色テーマ設定
 "gvimの色テーマは.gvimrcで指定する
@@ -439,6 +435,10 @@ endif
 
 "pluginを使用可能にする
 filetype plugin indent on
+" ハイライトを有効にする
+if &t_Co > 2 || has('gui_running')
+  syntax on
+endif
 
 "ファイル指定なしでVimを起動した場合にNERDTreeを表示する
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
