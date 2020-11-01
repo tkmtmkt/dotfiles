@@ -1,12 +1,4 @@
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-hook_add = '''
-source ~/.vim/init/LanguageClient-neovim.rc.vim
-'''
-
-[[plugins]]
 repo = 'vim-airline/vim-airline'
 hook_add = '''
 let g:airline_symbols_ascii = 1
@@ -26,6 +18,9 @@ endif
 '''
 
 [[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
 repo = 'roxma/vim-hug-neovim-rpc'
 if   = '''!has('nvim') && has('python3') && system('pip3 show pynvim') != '' '''
 
@@ -38,6 +33,40 @@ repo = 'Shougo/denite.nvim'
 depends = ['nvim-yarp','vim-hug-neovim-rpc']
 
 [[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_add = '''
+source ~/.vim/init/LanguageClient-neovim.rc.vim
+'''
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = ['context_filetype.vim']
+on_i = 1
+if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show pynvim') !=# '' '''
+on_event = 'InsertEnter'
+hook_source = '''
+source ~/.vim/init/deoplete.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+hook_add = '''
+if dein#tap('deoplete.nvim')
+  let g:deoplete#enable_at_startup = 1
+elseif dein#tap('neocomplete.vim')
+  let g:neocomplete#enable_at_startup = 1
+endif
+'''
+
+[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = 'context_filetype.vim'
 on_event = 'InsertCharPre'
@@ -47,13 +76,22 @@ source ~/.vim/init/neosnippet.rc.vim
 '''
 
 [[plugins]]
-repo = 'w0rp/ale'
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+depends = ['deoplete.nvim']
+
+[[plugins]]
+repo = 'Shougo/neco-syntax'
+depends = ['deoplete.nvim']
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'

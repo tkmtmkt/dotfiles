@@ -1,81 +1,43 @@
 [[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = ['toml']
-
-[[plugins]]
-repo = 'PProvost/vim-ps1'
-on_ft = ['ps1']
-
-[[plugins]]
-repo = 'derekwyatt/vim-scala'
-on_ft = ['scala']
-
-[[plugins]]
-repo = 'udalov/kotlin-vim'
-on_ft = ['kotlin']
-
-[[plugins]]
 repo = 'vim-scripts/VimClojure'
 on_ft = ['clojure']
-
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-on_ft = ['elixir']
-
-[[plugins]]
-repo  = 'Quramy/tsuquyomi'
-on_ft = ['typescript']
-
-[[plugins]]
-repo = 'slim-template/vim-slim'
-on_ft = ['slim']
-
-[[plugins]]
-repo = 'Rykka/riv.vim'
-on_ft = ['rst']
-
-[[plugins]]
-repo = 'martintreurnicht/vim-gradle'
-on_ft = ['gradle']
 
 [[plugins]]
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = ['Dockerfile']
 
 [[plugins]]
-repo = 'Shougo/context_filetype.vim'
+repo = 'elixir-lang/vim-elixir'
+on_ft = ['elixir']
 
 [[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+repo = 'martintreurnicht/vim-gradle'
+on_ft = ['gradle']
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-depends = ['context_filetype.vim']
-on_i = 1
-if   = ''' has('nvim') || has('timers') && has('python3') && system('pip3 show pynvim') !=# '' '''
-on_event = 'InsertEnter'
-hook_source = '''
-source ~/.vim/init/deoplete.rc.vim
-'''
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
 
 [[plugins]]
-repo = 'Shougo/neco-vim'
-depends = ['deoplete.nvim']
+repo = 'PProvost/vim-ps1'
+on_ft = ['ps1']
 
 [[plugins]]
-repo = 'Shougo/neco-syntax'
-depends = ['deoplete.nvim']
+repo = 'Rykka/riv.vim'
+on_ft = ['rst']
 
 [[plugins]]
-repo = 'ujihisa/neco-look'
-depends = ['deoplete.nvim']
+repo = 'derekwyatt/vim-scala'
+on_ft = ['scala']
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-hook_add = '''
-if dein#tap('deoplete.nvim')
-  let g:deoplete#enable_at_startup = 1
-elseif dein#tap('neocomplete.vim')
-  let g:neocomplete#enable_at_startup = 1
-endif
-'''
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo  = 'Quramy/tsuquyomi'
+on_ft = ['typescript']
