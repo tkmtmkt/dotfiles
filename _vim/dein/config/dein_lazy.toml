@@ -15,6 +15,10 @@ repo = 'martintreurnicht/vim-gradle'
 on_ft = ['gradle']
 
 [[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['gradle']
+
+[[plugins]]
 repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
 
