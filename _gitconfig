@@ -1,6 +1,9 @@
 [include]
 	path = ~/.gitconfig.local
 
+[init]
+	defaultBranch=main
+
 [core]
 	excludesfile = ~/.gitexclude  # globalな無視ファイル指定
 #	autocrlf = input                 # CRLFを自動変換
