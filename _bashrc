@@ -10,6 +10,12 @@ if [[ -f ~/.bash_aliases ]] ; then
 fi
 
 if [[ -d "$TOOLBOX_DIR" ]]; then
+  if [[ -s "$TOOLBOX_DIR/completion" ]]; then
+    for COMPLETION_FILE in $(ls $TOOLBOX_DIR/completion/*.bash)
+    do
+      . $COMPLETION_FILE
+    done
+  fi
   [[ -s "$TOOLBOX_DIR/share/git-core/contrib/completion/git-completion.bash" ]] && \
       . "$TOOLBOX_DIR/share/git-core/contrib/completion/git-completion.bash"
   [[ -s "$TOOLBOX_DIR/share/git-core/contrib/completion/git-prompt.sh" ]] && \
