@@ -23,7 +23,7 @@ linux)
   export LC_MESSAGES=C
   PB_="\[\e[0;35m\]=> \$?\n"
   P1_="\[\e[32m\]\$(date +'%F %T %z') "
-  P2_="\[\e[33m\]\u@\h:"
+  P2_="\[\e[33m\]\u@\h "
   P3_="\[\e[36m\]\w"
   PE_="\[\e[0m\]\n\\\$ "
   export PS1=$PB_$P1_$P2_$P3_$PE_
@@ -34,7 +34,7 @@ linux)
   export DISPLAY=localhost:0.0
   PB_="\[\e[0;35m\]=> \$?\n"
   P1_="\[\e[4;32m\]\$(date +'%F %T %z') "
-  P2_="\[\e[33m\]\u@\h:"
+  P2_="\[\e[33m\]\u@\h "
   P3_="\[\e[36m\]\w"
   PE_="\[\e[0m\]\n\\\$ "
   export PS1=$PB_$P1_$P2_$P3_$PG_$PE_
