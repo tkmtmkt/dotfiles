@@ -45,8 +45,11 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
   # PATH
   pathmunge $TOOLBOX_DIR/bin
   # MANPATH
-  [[ -z $MANPATH ]] && \
-    export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:"
+  if [[ -z $MANPATH ]]; then
+    export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man"
+  else
+    export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:$MANPATH"
+  fi
 fi
 
 # setting for JAVA
