@@ -16,6 +16,8 @@ alias ltr='ls -ltr'
 alias less="less -R "
 alias ..="cd .."
 
+alias tree='/usr/bin/tree -F --dirsfirst --charset=ascii'
+
 alias path='echo $PATH | sed "s/:/\n/g"'
 alias journal_dir='echo ~/journal/`date +"%Y/%m/%d"`'
 alias journal='[ ! -d `journal_dir` ] && mkdir -p `journal_dir`; pushd `journal_dir`'
