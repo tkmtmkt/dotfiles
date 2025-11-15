@@ -1,24 +1,39 @@
-# .bash_profile
+# .bash_aliases
 
+# color
 if [ -x /usr/bin/dircolors ]; then
   alias ls='ls --color=auto -F'
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
+
+# ls
+alias l='ls -CF'
 alias ll='ls -lF'
 alias lh='ls -lh'
 alias la='ls -A'
 alias lz='ls -Z'
-alias l='ls -CF'
 alias ltr='ls -ltr'
 
-alias less="less -R "
 alias ..="cd .."
-
+alias less="less -R "
+alias path='echo $PATH | sed "s/:/\n/g"'
 alias tree='/usr/bin/tree -F --dirsfirst --charset=ascii'
 
-alias path='echo $PATH | sed "s/:/\n/g"'
+# tmux
+alias tmls='tmux list-session '
+alias tmas='tmux attach-session -t '
+alias tmks='tmux kill-session -t '
+alias tmrs='tmux rename-session -t '
+alias tmns='tmux new -s '
+alias tmlw='tmux list-windows -t'
+alias tmnw='tmux new-window -n '
+alias tmkw='tmux kill-window -t'
+alias tmlp='tmux list-panes -t '
+alias tmrl='tmux source-file ~/.tmux.conf'
+alias tmd='tmux detach '
+
 alias journal_dir='echo ~/journal/`date +"%Y/%m/%d"`'
 alias journal='[ ! -d `journal_dir` ] && mkdir -p `journal_dir`; pushd `journal_dir`'
 alias memo='[ ! -d `journal_dir` ] && mkdir -p `journal_dir`; vim `journal_dir`/`date +"%Y%m%d.mkd"`'

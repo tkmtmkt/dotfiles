@@ -1,14 +1,23 @@
-#!/bin/bash
+# .bashrc
+
+# Source global definitions
+if [[ -f /etc/bashrc ]]; then
+  . /etc/bashrc
+fi
 
 # Source original definitions
 if [[ -f /etc/skel/.bashrc ]] ; then
   . /etc/skel/.bashrc
 fi
 
+# User specific aliases and functions
+
+# エリアス設定
 if [[ -f ~/.bash_aliases ]] ; then
   . ~/.bash_aliases
 fi
 
+# プロンプト設定
 if [[ -d "$TOOLBOX_DIR" ]]; then
   if [[ -s "$TOOLBOX_DIR/completion" ]]; then
     for COMPLETION_FILE in $(ls $TOOLBOX_DIR/completion/*.bash)
@@ -46,9 +55,6 @@ linux)
   export PS1=$PB_$P1_$P2_$P3_$PG_$PE_
   ;;
 esac
-
-export EDITOR=vim
-export XDG_CONFIG_HOME="$HOME/.config"
 
 # Enable .envrc file in directory
 if [[ -e "$(which direnv 2> /dev/null)" ]]; then

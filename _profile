@@ -1,3 +1,28 @@
+# .profile
+
+# User specific environment and startup programs
+
+# 環境変数設定
+export EDITOR=vim
+export XDG_CONFIG_HOME="${HOME}/.config"
+export TMUX_LOG_BASE="${HOME}/.local/var/log/tmux"
+export TMUX_LOG_DIR="${TMUX_LOG_BASE}/$(date '+%Y/%m/%d')"
+
+con () {
+  case "$1" in
+    "")
+      NAME="${USER}@${HOSTNAME}"
+      ;;
+    *)
+      NAME=$1
+      ;;
+  esac
+
+  [[ ! -d ${TMUX_LOG_DIR} ]] && mkdir -p ${TMUX_LOG_DIR}
+  tmux attach -t "${NAME}"\; set set-titles on \; set set-titles-string ${NAME} ||
+  tmux new -s    "${NAME}"\; set set-titles on \; set set-titles-string ${NAME}
+}
+
 pathmunge () {
   case ":${PATH}:" in
     *:"$1":*)
@@ -44,12 +69,6 @@ if [[ -d "$TOOLBOX_DIR" ]]; then
   export TOOLBOX_DIR
   # PATH
   pathmunge $TOOLBOX_DIR/bin
-  # MANPATH
-  if [[ -z $MANPATH ]]; then
-    export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man"
-  else
-    export MANPATH="$TOOLBOX_DIR/man:$TOOLBOX_DIR/share/man:$MANPATH"
-  fi
 fi
 
 # setting for JAVA
@@ -66,11 +85,6 @@ fi
 # Add RVM to PATH for scripting
 if [[ -d "$HOME/.rvm/bin" ]]; then
   pathmunge $HOME/.rvm/bin
-fi
-
-# settings for user bin
-if [[ -d "$HOME/bin" ]]; then
-  pathmunge $HOME/bin
 fi
 
 export PATH

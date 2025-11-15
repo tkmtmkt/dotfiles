@@ -194,6 +194,17 @@ $ nvm ls
 参考
 ----
 
+### XDG仕様
+
+- [Desktop base directories (basedir)](https://www.freedesktop.org/wiki/Specifications/basedir-spec/)
+
+| 使用目的 | 環境変数         | デフォルト値        | 説明 |
+|----------|------------------|---------------------|------|
+| data     | $XDG_DATA_HOME   | $HOME/.local/share/ | ユーザ固有のデータファイルを保存するベースディレクトリ |
+| config   | $XDG_CONFIG_HOME | $HOME/.config/      | ユーザ固有の設定ファイルを保存するベースディレクトリ |
+| cache    | $XDG_CACHE_HOME  | $HOME/.cache/       | ユーザー固有の非必須データファイルを保存するベースディレクトリ |
+
+
 ### [Ubuntu] デフォルトエディタをvimに設定する
 
     sudo update-alternatives --config editor
